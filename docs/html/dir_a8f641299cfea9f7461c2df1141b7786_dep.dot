@@ -1,0 +1,17 @@
+digraph "app/src"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_d422163b96683743ed3963d4aac17747 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="app", fontname="Helvetica", fontsize="10", URL="dir_d422163b96683743ed3963d4aac17747.html"]
+  subgraph clusterdir_a8f641299cfea9f7461c2df1141b7786 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_a8f641299cfea9f7461c2df1141b7786.html"]
+    dir_a8f641299cfea9f7461c2df1141b7786 [shape=plaintext, label="src"];
+  dir_8c1e2b4821511c730cb8b244d04a4fcf [shape=box, label="androidTest", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_8c1e2b4821511c730cb8b244d04a4fcf.html"];
+  dir_82a1580e18717db72c05fda59883f1c3 [shape=box, label="main", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_82a1580e18717db72c05fda59883f1c3.html"];
+  dir_86bcc0514dca1a2ed8a9daa573cbbe51 [shape=box, label="test", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_86bcc0514dca1a2ed8a9daa573cbbe51.html"];
+  }
+  }
+}

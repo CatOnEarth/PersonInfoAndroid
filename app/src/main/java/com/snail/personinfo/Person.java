@@ -4,21 +4,24 @@ package com.snail.personinfo;
  *
  */
 public class Person {
-    protected String email;
     /**
      * < user's email
      */
-    protected String name;
+    protected String email;
     /**
      * < user's name
      */
-    protected String surname;
+    protected String name;
     /**
      * < user's surname
      */
-    protected int age;
+    protected String surname;
     /**
      * < user's age
+     */
+    protected int age;
+    /**
+     * < user's gender
      */
     protected byte gender;   /**< user's gender*/
 
