@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
  <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
         tools:context=".MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -128,11 +129,36 @@
                 android:minHeight="48dp" />
         </androidx.gridlayout.widget.GridLayout>
 
-        <Button
-            android:id="@+id/buttonRegisterPerson"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ButtonRegisterPerson" />
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/buttonSelectAvatar"
+            android:layout_width="134dp"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:text="@string/ButtonTextSelectImageView"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/DescriptionImageViewAvatar"
+            app:layout_column="2"
+            app:layout_row="0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/buttonRegisterPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonRegisterPerson" />
+
+</LinearLayout>
 

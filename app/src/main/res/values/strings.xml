@@ -10,6 +10,8 @@
     <string name="HintAgePerson">Возраст</string>
     <string name="TextGenderPerson">Выберите пол:</string>
     <string name="ButtonRegisterPerson">Зарегистрировать</string>
+    <string name="DescriptionImageViewAvatar">avatar</string>
+    <string name="ButtonTextSelectImageView">Выбрать</string>
     <string-array name="genderTypes">
         <item>Не указан</item>
         <item>Мужской</item>
