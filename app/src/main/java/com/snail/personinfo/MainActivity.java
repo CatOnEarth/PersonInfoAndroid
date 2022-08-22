@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.snail.personinfo.db.DBHelper;
 import com.snail.personinfo.logger.Logger;
 
 /** Activity for save fill and save person info
@@ -91,14 +92,16 @@ public class MainActivity extends AppCompatActivity {
         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);
     }
 
-    /**
-     * 
+    /** Browser for select avatar
+     *
      */
     ActivityResultLauncher<Intent> sActiv = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
+                    logger.LogInfo(TAG, "call onActivityResult");
+
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
                         if (data != null) {
@@ -109,11 +112,13 @@ public class MainActivity extends AppCompatActivity {
             }
     );
 
-    /**
+    /**Method to open explorer for select avatar image
      *
-     * @param view
+     * @param view Button select avatar
      */
     public void openFileDialog(View view) {
+        logger.LogInfo(TAG, "call openFileDialog");
+
         Intent data = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         data.setType("image/*");
         data = Intent.createChooser(data, "Choose an avatar");
@@ -217,16 +222,40 @@ public class MainActivity extends AppCompatActivity {
         String textName     = editTextPersonName.getText().toString();
         String textSurname  = editTextPersonSurname.getText().toString();
         String textEmail    = editTextPersonEmail.getText().toString();
-        String textAge      = editTextPersonAge.getText().toString();
+        int    intAge       = Integer.parseInt(editTextPersonAge.getText().toString());
         String textGender   = spinnerGender.getSelectedItem().toString();
+        byte   byteGender   = ConvertGenderStrToByte(textGender);
 
         logger.LogInfo(TAG, "Person Info:  Name: "    + textName    + ", " +
                                                    "Surname: " + textSurname + ", " +
                                                    "Email: "   + textEmail   + ", " +
-                                                   "Age: "     + textAge     + ", " +
-                                                   "Gender: "  + textGender);
+                                                   "Age: "     + intAge      + ", " +
+                                                   "Gender: "  + textGender  + " (" + byteGender + ")");
 
+        Person   person   = new Person(textName, textSurname, textEmail, intAge, byteGender);
+        DBHelper dbHelper = new DBHelper(this);
 
+        dbHelper.insertPerson(person);
+    }
 
+    /**
+     * 
+     * @param textGender
+     * @return
+     */
+    private byte ConvertGenderStrToByte(String textGender) {
+        logger.LogInfo(TAG, "call ConvertGenderStrToByte");
+        logger.LogInfo(TAG, "Person select " + textGender);
+
+        switch (textGender) {
+            case "Мужской":
+                return 1;
+            case "Женский":
+                return 2;
+            case "Неопределенный":
+                return 3;
+            default:
+                return 0;
+        }
     }
 }

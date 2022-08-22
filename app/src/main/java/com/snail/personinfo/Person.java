@@ -40,16 +40,16 @@ public class Person {
     /**
      * Constructor for class Person
      *
-     * @param email   user's email
      * @param name    user's name
      * @param surname user's surname
+     * @param email   user's email
      * @param age     user's age
      * @param gender  user's gender
      */
-    public Person(String email, String name, String surname, int age, byte gender) {
-        this.email = email;
+    public Person(String name, String surname, String email, int age, byte gender) {
         this.name = name;
         this.surname = surname;
+        this.email = email;
         this.age = age;
         this.gender = gender;
     }
