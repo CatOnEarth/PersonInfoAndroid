@@ -19,23 +19,23 @@ public class DBHelper  extends SQLiteOpenHelper {
     /** logger */
     private       Logger logger;
     /** Database version */
-    public static final int    DATABASE_VERSION = 1;
+    private static final int    DATABASE_VERSION = 1;
     /** Database name */
-    public static final String DATABASE_NAME = "personsDB";
+    private static final String DATABASE_NAME = "personsDB";
     /** Table name for save info about persons */
-    public static final String TABLE_PERSONS = "persons";
+    private static final String TABLE_PERSONS = "persons";
     /** Column name _id */
-    public static final String KEY_ID      = "_id";
+    private static final String KEY_ID      = "_id";
     /** Column name name */
-    public static final String KEY_NAME    = "name";
+    private static final String KEY_NAME    = "name";
     /** Column name surname */
-    public static final String KEY_SURNAME = "surname";
+    private static final String KEY_SURNAME = "surname";
     /** Column name email */
-    public static final String KEY_EMAIL   = "email";
+    private static final String KEY_EMAIL   = "email";
     /** Column name age */
-    public static final String KEY_AGE     = "age";
+    private static final String KEY_AGE     = "age";
     /** Column name gender */
-    public static final String KEY_GENDER  = "gender";
+    private static final String KEY_GENDER  = "gender";
 
     /** Constructor for DBHelper
      *

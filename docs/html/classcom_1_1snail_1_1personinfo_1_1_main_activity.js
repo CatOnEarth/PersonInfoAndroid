@@ -14,6 +14,7 @@ var classcom_1_1snail_1_1personinfo_1_1_main_activity =
     [ "editTextPersonName", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a86ce7869f827c1a04d0fd41d0496aa1e", null ],
     [ "editTextPersonSurname", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#acd3c018ffcc30bb54e4f6b84c5075862", null ],
     [ "logger", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a4cf97e15fdd4c41a64acc5a8ce986aaa", null ],
+    [ "selectActivityRes", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aabcb5f08dfd82159cfa71bbc5f006f7d", null ],
     [ "spinnerGender", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a4e74dfe6607dfb1d749832fc5eb9f1b6", null ],
     [ "TAG", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a90168fc5f7d2203e4659243015d06fb6", null ]
 ];

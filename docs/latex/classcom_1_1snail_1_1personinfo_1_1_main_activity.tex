@@ -28,6 +28,11 @@ void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6
 \item 
 void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{on\+Create}} (Bundle saved\+Instance\+State)
 \end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Activity\+Result\+Launcher$<$ Intent $>$ \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}{select\+Activity\+Res}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -349,6 +354,36 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00033}{33}} of 
 Logger 
 
 Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00029}{29}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}\label{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}} 
+\index{com.snail.personinfo.MainActivity@{com.snail.personinfo.MainActivity}!selectActivityRes@{selectActivityRes}}
+\index{selectActivityRes@{selectActivityRes}!com.snail.personinfo.MainActivity@{com.snail.personinfo.MainActivity}}
+\doxysubsubsection{\texorpdfstring{selectActivityRes}{selectActivityRes}}
+{\footnotesize\ttfamily Activity\+Result\+Launcher$<$Intent$>$ com.\+snail.\+personinfo.\+Main\+Activity.\+select\+Activity\+Res\hspace{0.3cm}{\ttfamily [package]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= registerForActivityResult(}
+\DoxyCodeLine{            \textcolor{keyword}{new} ActivityResultContracts.StartActivityForResult(),}
+\DoxyCodeLine{            \textcolor{keyword}{new} ActivityResultCallback<ActivityResult>() \{}
+\DoxyCodeLine{                @Override}
+\DoxyCodeLine{                public void onActivityResult(ActivityResult result) \{}
+\DoxyCodeLine{                    logger.LogInfo(TAG, \textcolor{stringliteral}{"{}call onActivityResult"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    if (result.getResultCode() == Activity.RESULT\_OK) \{}
+\DoxyCodeLine{                        Intent data = result.getData();}
+\DoxyCodeLine{                        if (data != null) \{}
+\DoxyCodeLine{                            Uri uri = data.getData();}
+\DoxyCodeLine{                        \}}
+\DoxyCodeLine{                    \}}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+Browser for select avatar 
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00080}{80}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}\label{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}} 
 \index{com.snail.personinfo.MainActivity@{com.snail.personinfo.MainActivity}!spinnerGender@{spinnerGender}}

@@ -33,7 +33,14 @@ long \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25
 \item 
 boolean \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aa43cde57e324cc68d2236eb22470d7d8}{Is\+Person\+Exist}} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}} person)
 \end{DoxyCompactItemize}
-\doxysubsection*{Static Public Attributes}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a65e658ccc9278fa7c4fdaa2d25f7b10b}{TAG}} = \char`\"{}DBHelper\char`\"{}
+\item 
+\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aff2194d62591f0e5e83ff661b757d7ab}{logger}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static final int \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a352dbf8d0a21f543668fc3b20937dca3}{DATABASE\+\_\+\+VERSION}} = 1
@@ -53,13 +60,6 @@ static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d
 static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5ffad8da8a10dd8d18a81570f32c5598}{KEY\+\_\+\+AGE}} = \char`\"{}age\char`\"{}
 \item 
 static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ace004a593a86ef88c7ad92b82ac6300f}{KEY\+\_\+\+GENDER}} = \char`\"{}gender\char`\"{}
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a65e658ccc9278fa7c4fdaa2d25f7b10b}{TAG}} = \char`\"{}DBHelper\char`\"{}
-\item 
-\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aff2194d62591f0e5e83ff661b757d7ab}{logger}}
 \end{DoxyCompactItemize}
 
 
@@ -244,7 +244,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00123}{123}} of fi
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!DATABASE\_NAME@{DATABASE\_NAME}}
 \index{DATABASE\_NAME@{DATABASE\_NAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{DATABASE\_NAME}{DATABASE\_NAME}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+NAME = \char`\"{}persons\+DB\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+NAME = \char`\"{}persons\+DB\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Database name 
 
@@ -254,7 +254,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00024}{24}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!DATABASE\_VERSION@{DATABASE\_VERSION}}
 \index{DATABASE\_VERSION@{DATABASE\_VERSION}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{DATABASE\_VERSION}{DATABASE\_VERSION}}
-{\footnotesize\ttfamily final int com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+VERSION = 1\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final int com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+VERSION = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Database version 
 
@@ -264,7 +264,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00022}{22}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_AGE@{KEY\_AGE}}
 \index{KEY\_AGE@{KEY\_AGE}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_AGE}{KEY\_AGE}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+AGE = \char`\"{}age\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+AGE = \char`\"{}age\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name age 
 
@@ -274,7 +274,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00036}{36}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_EMAIL@{KEY\_EMAIL}}
 \index{KEY\_EMAIL@{KEY\_EMAIL}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_EMAIL}{KEY\_EMAIL}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+EMAIL = \char`\"{}email\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+EMAIL = \char`\"{}email\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name email 
 
@@ -284,7 +284,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00034}{34}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_GENDER@{KEY\_GENDER}}
 \index{KEY\_GENDER@{KEY\_GENDER}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_GENDER}{KEY\_GENDER}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+GENDER = \char`\"{}gender\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+GENDER = \char`\"{}gender\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name gender 
 
@@ -294,7 +294,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00038}{38}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_ID@{KEY\_ID}}
 \index{KEY\_ID@{KEY\_ID}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_ID}{KEY\_ID}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+ID = \char`\"{}\+\_\+id\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+ID = \char`\"{}\+\_\+id\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name \+\_\+id 
 
@@ -304,7 +304,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00028}{28}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_NAME@{KEY\_NAME}}
 \index{KEY\_NAME@{KEY\_NAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_NAME}{KEY\_NAME}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+NAME = \char`\"{}name\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+NAME = \char`\"{}name\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name name 
 
@@ -314,7 +314,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00030}{30}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_SURNAME@{KEY\_SURNAME}}
 \index{KEY\_SURNAME@{KEY\_SURNAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{KEY\_SURNAME}{KEY\_SURNAME}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+SURNAME = \char`\"{}surname\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+SURNAME = \char`\"{}surname\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Column name surname 
 
@@ -334,7 +334,7 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00020}{20}} of fil
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!TABLE\_PERSONS@{TABLE\_PERSONS}}
 \index{TABLE\_PERSONS@{TABLE\_PERSONS}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{TABLE\_PERSONS}{TABLE\_PERSONS}}
-{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+TABLE\+\_\+\+PERSONS = \char`\"{}persons\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+TABLE\+\_\+\+PERSONS = \char`\"{}persons\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Table name for save info about persons 
 

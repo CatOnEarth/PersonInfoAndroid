@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,17 +44,39 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -102,8 +129,9 @@ $(document).ready(function(){initNavTree('classcom_1_1snail_1_1personinfo_1_1_ma
   <tr class="odd"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a65783ced64e86f51769bf17443dbe508">onCreate</a>(Bundle savedInstanceState)</td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#ae770fe6b4aed51af9317e60a6841c0d7">openFileDialog</a>(View view)</td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aa68a6b1ff861ba89b341886d2d841130">RegisterPerson</a>()</td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a4e74dfe6607dfb1d749832fc5eb9f1b6">spinnerGender</a></td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a90168fc5f7d2203e4659243015d06fb6">TAG</a></td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aabcb5f08dfd82159cfa71bbc5f006f7d">selectActivityRes</a></td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">package</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a4e74dfe6607dfb1d749832fc5eb9f1b6">spinnerGender</a></td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a90168fc5f7d2203e4659243015d06fb6">TAG</a></td><td class="entry"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html">com.snail.personinfo.MainActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
