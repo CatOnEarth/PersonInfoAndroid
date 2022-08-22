@@ -19,6 +19,8 @@ import android.widget.Toast;
 import com.snail.personinfo.db.DBHelper;
 import com.snail.personinfo.logger.Logger;
 
+import java.util.ArrayList;
+
 /** Activity for fill and save person info
  *
  */
@@ -57,9 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerGender         = findViewById(R.id.spinnerGenders);
 
-        Button bReg           = findViewById(R.id.buttonRegisterPerson);
-        Button bSelectAvatar  = findViewById(R.id.buttonSelectAvatar);
-        Button bClearDB       = findViewById(R.id.buttonClearDB);
+        Button bReg            = findViewById(R.id.buttonRegisterPerson);
+        Button bSelectAvatar   = findViewById(R.id.buttonSelectAvatar);
+        Button bClearDB        = findViewById(R.id.buttonClearDB);
+        Button bShowAllPersons = findViewById(R.id.buttonShowAllPersons);
 
         View.OnClickListener regBtnClick = view -> {
             logger.LogInfo(TAG, "Click reg button");
@@ -78,9 +81,30 @@ public class MainActivity extends AppCompatActivity {
             clearDB();
         };
 
+        View.OnClickListener showAllPersonsBtnClick = view -> {
+            logger.LogInfo(TAG, "Click show all persons button");
+            showAllPersons();
+        };
+
         bReg.setOnClickListener(regBtnClick);
         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);
         bClearDB.setOnClickListener(clearDbBtnClick);
+        bShowAllPersons.setOnClickListener(showAllPersonsBtnClick);
+    }
+
+    /** Method to show all persons info
+     *
+     */
+    private void showAllPersons() {
+        logger.LogInfo(TAG, "call showAllPersons");
+        DBHelper dbHelper = new DBHelper(this);
+        ArrayList<Person> persons = dbHelper.selectAllPersons();
+
+        for (int ii = 0; ii < persons.size(); ++ii) {
+            Toast.makeText(this, "Person №" + String.valueOf(ii) + ". Name: " + persons.get(ii).getName() +
+                    "; Surname: " + persons.get(ii).getSurname() + "; Email: " + persons.get(ii).getEmail() + "; Age: " + String.valueOf(persons.get(ii).getAge()) +
+                    "; Gender: " + String.valueOf(persons.get(ii).getGender()), Toast.LENGTH_LONG).show();
+        }
     }
 
     /** Method to clear db person info table

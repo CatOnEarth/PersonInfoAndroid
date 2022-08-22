@@ -13,6 +13,7 @@
     <string name="DescriptionImageViewAvatar">avatar</string>
     <string name="ButtonTextSelectImageView">Выбрать</string>
     <string name="ButtonClearDB">Очистить базу данных</string>
+    <string name="textShowAllPersons">Вывести всех людей</string>
     <string-array name="genderTypes">
         <item>Не указан</item>
         <item>Мужской</item>

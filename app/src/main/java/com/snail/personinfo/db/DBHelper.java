@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.snail.personinfo.logger.Logger;
 import com.snail.personinfo.Person;
 
+import java.util.ArrayList;
+
 /** Class for work with Database SQLITE
  *
  */
@@ -131,8 +133,52 @@ public class DBHelper  extends SQLiteOpenHelper {
      *
      * @return Selected person from person table
      */
-    public Person selectPerson(Person person) {
-        return new Person("NULL", "NULL", "NULL", -1, (byte) -1);
+    public ArrayList<Person> selectAllPersons() {
+        logger = new Logger();
+        logger.LogInfo(TAG, "call selectAllPersons");
+
+        SQLiteDatabase database = getWritableDatabase();
+        @SuppressLint("Recycle") Cursor cursor = database.query(TABLE_PERSONS, null,
+                null, null, null, null, null);
+
+        ArrayList<Person> persons = new ArrayList<Person>();
+
+        if (cursor.moveToFirst()) {
+            int idColIndex      = cursor.getColumnIndex(KEY_ID);
+            int nameColIndex    = cursor.getColumnIndex(KEY_NAME);
+            int surnameColIndex = cursor.getColumnIndex(KEY_SURNAME);
+            int emailColIndex   = cursor.getColumnIndex(KEY_EMAIL);
+            int ageColIndex     = cursor.getColumnIndex(KEY_AGE);
+            int genderColIndex  = cursor.getColumnIndex(KEY_GENDER);
+
+            String textName    = "";
+            String textSurname = "";
+            String textEmail   = "";
+            int    intAge      = -1;
+            byte   byteGender  = -1;
+
+            int count = 1;
+
+            do {
+                textName     = cursor.getString(nameColIndex);
+                textSurname  = cursor.getString(surnameColIndex);
+                textEmail    = cursor.getString(emailColIndex);
+                intAge       = cursor.getInt(ageColIndex);
+                byteGender   = (byte) cursor.getInt(genderColIndex);
+
+                logger.LogInfo(TAG, "Person №" + String.valueOf(count) + ". Name: " + textName +
+                        "; Surname: " + textSurname + "; Email: " + textEmail + "; Age: " + String.valueOf(intAge) +
+                        "; Gender: " + String.valueOf(byteGender));
+
+                persons.add(new Person(textName, textSurname, textEmail, intAge, byteGender));
+
+                ++count;
+            } while (cursor.moveToNext());
+        } else {
+            logger.LogInfo(TAG, "0 rows selected");
+        }
+
+        return persons;
     }
 
     /** Check if person exist in person table
