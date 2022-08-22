@@ -1,4 +1,11 @@
 <map id="com.snail.personinfo.MainActivity.RegisterPerson" name="com.snail.personinfo.MainActivity.RegisterPerson">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,179,47"/>
-<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#a5cf3890060633cb2b26fc94b42bdefea" title=" " alt="" coords="227,5,411,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,275,179,317"/>
+<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#add43267f69d992f39d9d981dc76a4d47" title=" " alt="" coords="227,210,389,251"/>
+<area shape="rect" id="node9" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#a5cf3890060633cb2b26fc94b42bdefea" title=" " alt="" coords="467,370,651,411"/>
+<area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1_person.html#a878eafbd1c9be601240da2864ba7f09f" title=" " alt="" coords="443,5,674,32"/>
+<area shape="rect" id="node4" href="$classcom_1_1snail_1_1personinfo_1_1_person.html#ac6b0980d574fafc8540a0a56f4eecaab" title=" " alt="" coords="455,57,663,98"/>
+<area shape="rect" id="node5" href="$classcom_1_1snail_1_1personinfo_1_1_person.html#ae36869a8ecc3de522ba87b32c89980dc" title=" " alt="" coords="455,122,663,163"/>
+<area shape="rect" id="node6" href="$classcom_1_1snail_1_1personinfo_1_1_person.html#a6435952a428bc910fe2bd05e956bdc2a" title=" " alt="" coords="437,188,680,215"/>
+<area shape="rect" id="node7" href="$classcom_1_1snail_1_1personinfo_1_1_person.html#a05730e0be58e6ab68d10f2382c87b233" title=" " alt="" coords="455,239,663,281"/>
+<area shape="rect" id="node8" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#aeed9e9ef1934883b8f8aa3061e8d95eb" title=" " alt="" coords="467,305,651,346"/>
 </map>

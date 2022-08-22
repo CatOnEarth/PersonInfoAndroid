@@ -47,7 +47,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_contact_database_8java.html"
+"_d_b_helper_8java.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

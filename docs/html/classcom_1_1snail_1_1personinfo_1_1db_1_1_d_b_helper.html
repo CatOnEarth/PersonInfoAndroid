@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('classcom_1_1snail_1_1personinfo_1_1db_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">com.snail.personinfo.db.DBHelper Class Reference</div></div>
 </div><!--header-->
@@ -102,8 +104,9 @@ Collaboration diagram for com.snail.personinfo.db.DBHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper__coll__graph.png" border="0" usemap="#acom_8snail_8personinfo_8db_8_d_b_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="acom_8snail_8personinfo_8db_8_d_b_helper_coll__map" id="acom_8snail_8personinfo_8db_8_d_b_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,168,121"/>
-<area shape="rect" title=" " alt="" coords="21,5,152,32"/>
+<area shape="rect" title=" " alt="" coords="80,109,243,151"/>
+<area shape="rect" title=" " alt="" coords="5,13,136,39"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html" title=" " alt="" coords="160,5,344,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -111,14 +114,45 @@ Collaboration diagram for com.snail.personinfo.db.DBHelper:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ddbfe0a42cac96afd304c7208ea879f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a1ddbfe0a42cac96afd304c7208ea879f">DBHelper</a> (Context context)</td></tr>
 <tr class="separator:a1ddbfe0a42cac96afd304c7208ea879f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5335eee36cf32dd4e81f05a25d92264b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a5335eee36cf32dd4e81f05a25d92264b">onCreate</a> (SQLiteDatabase sqLiteDatabase)</td></tr>
-<tr class="separator:a5335eee36cf32dd4e81f05a25d92264b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e86ebba290be6632f24bf5beb91555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a06e86ebba290be6632f24bf5beb91555">onUpgrade</a> (SQLiteDatabase sqLiteDatabase, int i, int i1)</td></tr>
-<tr class="separator:a06e86ebba290be6632f24bf5beb91555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a708a0b725e3a71c00075a2a8927a1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a4a708a0b725e3a71c00075a2a8927a1d">onCreate</a> (SQLiteDatabase db)</td></tr>
+<tr class="separator:a4a708a0b725e3a71c00075a2a8927a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9746ed1224d05dce7e2e243de0f92d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a9a9746ed1224d05dce7e2e243de0f92d">onUpgrade</a> (SQLiteDatabase db, int oldVersion, int newVersion)</td></tr>
+<tr class="separator:a9a9746ed1224d05dce7e2e243de0f92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add43267f69d992f39d9d981dc76a4d47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#add43267f69d992f39d9d981dc76a4d47">insertPerson</a> (<a class="el" href="classcom_1_1snail_1_1personinfo_1_1_person.html">Person</a> person)</td></tr>
+<tr class="separator:add43267f69d992f39d9d981dc76a4d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a352dbf8d0a21f543668fc3b20937dca3"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a352dbf8d0a21f543668fc3b20937dca3">DATABASE_VERSION</a> = 1</td></tr>
+<tr class="separator:a352dbf8d0a21f543668fc3b20937dca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9af3af551d6486da3da6894057bd13"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a7d9af3af551d6486da3da6894057bd13">DATABASE_NAME</a> = &quot;personsDB&quot;</td></tr>
+<tr class="separator:a7d9af3af551d6486da3da6894057bd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3748082e04eb9ffdc1e4f801abc810df"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a3748082e04eb9ffdc1e4f801abc810df">TABLE_PERSONS</a> = &quot;persons&quot;</td></tr>
+<tr class="separator:a3748082e04eb9ffdc1e4f801abc810df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27a1464fb718bf82b27cf6ddcd20c7e"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#ab27a1464fb718bf82b27cf6ddcd20c7e">KEY_ID</a> = &quot;_id&quot;</td></tr>
+<tr class="separator:ab27a1464fb718bf82b27cf6ddcd20c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aeec1b705e9ef86d196b645141c7695"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a2aeec1b705e9ef86d196b645141c7695">KEY_NAME</a> = &quot;name&quot;</td></tr>
+<tr class="separator:a2aeec1b705e9ef86d196b645141c7695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22cf8ef83fff0556a414ae3d4f20a282"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a22cf8ef83fff0556a414ae3d4f20a282">KEY_SURNAME</a> = &quot;surname&quot;</td></tr>
+<tr class="separator:a22cf8ef83fff0556a414ae3d4f20a282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6110036ef516d982cbf20b25b838887"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#af6110036ef516d982cbf20b25b838887">KEY_EMAIL</a> = &quot;email&quot;</td></tr>
+<tr class="separator:af6110036ef516d982cbf20b25b838887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffad8da8a10dd8d18a81570f32c5598"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a5ffad8da8a10dd8d18a81570f32c5598">KEY_AGE</a> = &quot;age&quot;</td></tr>
+<tr class="separator:a5ffad8da8a10dd8d18a81570f32c5598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace004a593a86ef88c7ad92b82ac6300f"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#ace004a593a86ef88c7ad92b82ac6300f">KEY_GENDER</a> = &quot;gender&quot;</td></tr>
+<tr class="separator:ace004a593a86ef88c7ad92b82ac6300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a65e658ccc9278fa7c4fdaa2d25f7b10b"><td class="memItemLeft" align="right" valign="top">final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a65e658ccc9278fa7c4fdaa2d25f7b10b">TAG</a> = &quot;DBHelper&quot;</td></tr>
+<tr class="separator:a65e658ccc9278fa7c4fdaa2d25f7b10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff2194d62591f0e5e83ff661b757d7ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#aff2194d62591f0e5e83ff661b757d7ab">logger</a></td></tr>
+<tr class="separator:aff2194d62591f0e5e83ff661b757d7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00010">10</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<div class="textblock"><p >Class for work with Database SQLITE </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00015">15</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1ddbfe0a42cac96afd304c7208ea879f" name="a1ddbfe0a42cac96afd304c7208ea879f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ddbfe0a42cac96afd304c7208ea879f">&#9670;&nbsp;</a></span>DBHelper()</h2>
@@ -135,20 +169,73 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Constructor for <a class="el" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html">DBHelper</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td></td></tr>
+    <tr><td class="paramname">context</td><td>Context </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00016">16</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00043">43</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5335eee36cf32dd4e81f05a25d92264b" name="a5335eee36cf32dd4e81f05a25d92264b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5335eee36cf32dd4e81f05a25d92264b">&#9670;&nbsp;</a></span>onCreate()</h2>
+<a id="add43267f69d992f39d9d981dc76a4d47" name="add43267f69d992f39d9d981dc76a4d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add43267f69d992f39d9d981dc76a4d47">&#9670;&nbsp;</a></span>insertPerson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.snail.personinfo.db.DBHelper.insertPerson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1_person.html">Person</a>&#160;</td>
+          <td class="paramname"><em>person</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Insert new person in person table</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">person</td><td>Object person, who need to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00084">84</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_cgraph.png" border="0" usemap="#aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_cgraph" alt=""/></div>
+<map name="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_cgraph" id="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_cgraph">
+<area shape="rect" title=" " alt="" coords="5,181,168,222"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_person.html#a878eafbd1c9be601240da2864ba7f09f" title=" " alt="" coords="222,5,453,32"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_person.html#ac6b0980d574fafc8540a0a56f4eecaab" title=" " alt="" coords="233,57,441,98"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_person.html#ae36869a8ecc3de522ba87b32c89980dc" title=" " alt="" coords="233,122,441,163"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_person.html#a6435952a428bc910fe2bd05e956bdc2a" title=" " alt="" coords="216,188,459,215"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_person.html#a05730e0be58e6ab68d10f2382c87b233" title=" " alt="" coords="233,239,441,281"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#aeed9e9ef1934883b8f8aa3061e8d95eb" title=" " alt="" coords="245,305,429,346"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#a5cf3890060633cb2b26fc94b42bdefea" title=" " alt="" coords="245,370,429,411"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_icgraph.png" border="0" usemap="#aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_icgraph" alt=""/></div>
+<map name="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_icgraph" id="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_icgraph">
+<area shape="rect" title=" " alt="" coords="448,5,611,47"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aa68a6b1ff861ba89b341886d2d841130" title=" " alt="" coords="227,5,400,47"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a65783ced64e86f51769bf17443dbe508" title=" " alt="" coords="5,5,179,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4a708a0b725e3a71c00075a2a8927a1d" name="a4a708a0b725e3a71c00075a2a8927a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a708a0b725e3a71c00075a2a8927a1d">&#9670;&nbsp;</a></span>onCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,24 +244,34 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void com.snail.personinfo.db.DBHelper.onCreate </td>
           <td>(</td>
           <td class="paramtype">SQLiteDatabase&#160;</td>
-          <td class="paramname"><em>sqLiteDatabase</em></td><td>)</td>
+          <td class="paramname"><em>db</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Call if database not exist</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sqLiteDatabase</td><td></td></tr>
+    <tr><td class="paramname">db</td><td>SQLITE </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00025">25</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00052">52</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d_icgraph.png" border="0" usemap="#aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d_icgraph" alt=""/></div>
+<map name="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d_icgraph" id="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,379,47"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a9a9746ed1224d05dce7e2e243de0f92d" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a06e86ebba290be6632f24bf5beb91555" name="a06e86ebba290be6632f24bf5beb91555"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06e86ebba290be6632f24bf5beb91555">&#9670;&nbsp;</a></span>onUpgrade()</h2>
+<a id="a9a9746ed1224d05dce7e2e243de0f92d" name="a9a9746ed1224d05dce7e2e243de0f92d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9746ed1224d05dce7e2e243de0f92d">&#9670;&nbsp;</a></span>onUpgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,19 +280,19 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void com.snail.personinfo.db.DBHelper.onUpgrade </td>
           <td>(</td>
           <td class="paramtype">SQLiteDatabase&#160;</td>
-          <td class="paramname"><em>sqLiteDatabase</em>, </td>
+          <td class="paramname"><em>db</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
+          <td class="paramname"><em>oldVersion</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i1</em>&#160;</td>
+          <td class="paramname"><em>newVersion</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -204,16 +301,302 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Call if need to update version of database</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sqLiteDatabase</td><td></td></tr>
-    <tr><td class="paramname">i</td><td></td></tr>
-    <tr><td class="paramname">i1</td><td></td></tr>
+    <tr><td class="paramname">db</td><td>SQLITE </td></tr>
+    <tr><td class="paramname">oldVersion</td><td>number of old version db </td></tr>
+    <tr><td class="paramname">newVersion</td><td>number of new version db </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00038">38</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00073">73</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d_cgraph.png" border="0" usemap="#aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d_cgraph" alt=""/></div>
+<map name="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d_cgraph" id="aclasscom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" href="classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a4a708a0b725e3a71c00075a2a8927a1d" title=" " alt="" coords="216,5,379,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7d9af3af551d6486da3da6894057bd13" name="a7d9af3af551d6486da3da6894057bd13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9af3af551d6486da3da6894057bd13">&#9670;&nbsp;</a></span>DATABASE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.DATABASE_NAME = &quot;personsDB&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Database name </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00023">23</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a352dbf8d0a21f543668fc3b20937dca3" name="a352dbf8d0a21f543668fc3b20937dca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352dbf8d0a21f543668fc3b20937dca3">&#9670;&nbsp;</a></span>DATABASE_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.snail.personinfo.db.DBHelper.DATABASE_VERSION = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Database version </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00021">21</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a5ffad8da8a10dd8d18a81570f32c5598" name="a5ffad8da8a10dd8d18a81570f32c5598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ffad8da8a10dd8d18a81570f32c5598">&#9670;&nbsp;</a></span>KEY_AGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_AGE = &quot;age&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name age </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00035">35</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="af6110036ef516d982cbf20b25b838887" name="af6110036ef516d982cbf20b25b838887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6110036ef516d982cbf20b25b838887">&#9670;&nbsp;</a></span>KEY_EMAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_EMAIL = &quot;email&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name email </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00033">33</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="ace004a593a86ef88c7ad92b82ac6300f" name="ace004a593a86ef88c7ad92b82ac6300f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace004a593a86ef88c7ad92b82ac6300f">&#9670;&nbsp;</a></span>KEY_GENDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_GENDER = &quot;gender&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name gender </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00037">37</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="ab27a1464fb718bf82b27cf6ddcd20c7e" name="ab27a1464fb718bf82b27cf6ddcd20c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27a1464fb718bf82b27cf6ddcd20c7e">&#9670;&nbsp;</a></span>KEY_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_ID = &quot;_id&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name _id </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00027">27</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a2aeec1b705e9ef86d196b645141c7695" name="a2aeec1b705e9ef86d196b645141c7695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aeec1b705e9ef86d196b645141c7695">&#9670;&nbsp;</a></span>KEY_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_NAME = &quot;name&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name name </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00029">29</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a22cf8ef83fff0556a414ae3d4f20a282" name="a22cf8ef83fff0556a414ae3d4f20a282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cf8ef83fff0556a414ae3d4f20a282">&#9670;&nbsp;</a></span>KEY_SURNAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.KEY_SURNAME = &quot;surname&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Column name surname </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00031">31</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="aff2194d62591f0e5e83ff661b757d7ab" name="aff2194d62591f0e5e83ff661b757d7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2194d62591f0e5e83ff661b757d7ab">&#9670;&nbsp;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html">Logger</a> com.snail.personinfo.db.DBHelper.logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >logger </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00019">19</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a3748082e04eb9ffdc1e4f801abc810df" name="a3748082e04eb9ffdc1e4f801abc810df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3748082e04eb9ffdc1e4f801abc810df">&#9670;&nbsp;</a></span>TABLE_PERSONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.TABLE_PERSONS = &quot;persons&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Table name for save info about persons </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00025">25</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
+
+</div>
+</div>
+<a id="a65e658ccc9278fa7c4fdaa2d25f7b10b" name="a65e658ccc9278fa7c4fdaa2d25f7b10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e658ccc9278fa7c4fdaa2d25f7b10b">&#9670;&nbsp;</a></span>TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.snail.personinfo.db.DBHelper.TAG = &quot;DBHelper&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >TAG </p>
+
+<p class="definition">Definition at line <a class="el" href="_d_b_helper_8java_source.html#l00017">17</a> of file <a class="el" href="_d_b_helper_8java_source.html">DBHelper.java</a>.</p>
 
 </div>
 </div>

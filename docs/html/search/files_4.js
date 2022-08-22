@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_2ejava_0',['Logger.java',['../_logger_8java.html',1,'']]]
+  ['mainactivity_2ejava_0',['MainActivity.java',['../_main_activity_8java.html',1,'']]]
 ];

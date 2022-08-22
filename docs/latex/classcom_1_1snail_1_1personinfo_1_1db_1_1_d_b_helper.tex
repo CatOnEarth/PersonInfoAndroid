@@ -15,7 +15,7 @@ Collaboration diagram for com.\+snail.\+personinfo.\+db.\+DBHelper\+:\nopagebrea
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper__coll__graph}
+\includegraphics[width=334pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -23,16 +23,46 @@ Collaboration diagram for com.\+snail.\+personinfo.\+db.\+DBHelper\+:\nopagebrea
 \item 
 \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a1ddbfe0a42cac96afd304c7208ea879f}{DBHelper}} (Context context)
 \item 
-void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5335eee36cf32dd4e81f05a25d92264b}{on\+Create}} (SQLite\+Database sq\+Lite\+Database)
+void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d}{on\+Create}} (SQLite\+Database db)
 \item 
-void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a06e86ebba290be6632f24bf5beb91555}{on\+Upgrade}} (SQLite\+Database sq\+Lite\+Database, int i, int i1)
+void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d}{on\+Upgrade}} (SQLite\+Database db, int old\+Version, int new\+Version)
+\item 
+void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47}{insert\+Person}} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}} person)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a352dbf8d0a21f543668fc3b20937dca3}{DATABASE\+\_\+\+VERSION}} = 1
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a7d9af3af551d6486da3da6894057bd13}{DATABASE\+\_\+\+NAME}} = \char`\"{}persons\+DB\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a3748082e04eb9ffdc1e4f801abc810df}{TABLE\+\_\+\+PERSONS}} = \char`\"{}persons\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ab27a1464fb718bf82b27cf6ddcd20c7e}{KEY\+\_\+\+ID}} = \char`\"{}\+\_\+id\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a2aeec1b705e9ef86d196b645141c7695}{KEY\+\_\+\+NAME}} = \char`\"{}name\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a22cf8ef83fff0556a414ae3d4f20a282}{KEY\+\_\+\+SURNAME}} = \char`\"{}surname\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_af6110036ef516d982cbf20b25b838887}{KEY\+\_\+\+EMAIL}} = \char`\"{}email\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5ffad8da8a10dd8d18a81570f32c5598}{KEY\+\_\+\+AGE}} = \char`\"{}age\char`\"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ace004a593a86ef88c7ad92b82ac6300f}{KEY\+\_\+\+GENDER}} = \char`\"{}gender\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a65e658ccc9278fa7c4fdaa2d25f7b10b}{TAG}} = \char`\"{}DBHelper\char`\"{}
+\item 
+\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aff2194d62591f0e5e83ff661b757d7ab}{logger}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Class for work with Database SQLITE 
 
-
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00010}{10}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00015}{15}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 
 
@@ -43,51 +73,215 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00010}{10}} of fil
 \doxysubsubsection{\texorpdfstring{DBHelper()}{DBHelper()}}
 {\footnotesize\ttfamily com.\+snail.\+personinfo.\+db.\+DBHelper.\+DBHelper (\begin{DoxyParamCaption}\item[{Context}]{context }\end{DoxyParamCaption})}
 
+Constructor for \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}
+
 
 \begin{DoxyParams}{Parameters}
-{\em context} & \\
+{\em context} & Context \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00016}{16}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00043}{43}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5335eee36cf32dd4e81f05a25d92264b}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5335eee36cf32dd4e81f05a25d92264b}} 
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!insertPerson@{insertPerson}}
+\index{insertPerson@{insertPerson}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{insertPerson()}{insertPerson()}}
+{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+insert\+Person (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}}}]{person }\end{DoxyParamCaption})}
+
+Insert new person in person table
+
+
+\begin{DoxyParams}{Parameters}
+{\em person} & Object person, who need to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00084}{84}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_add43267f69d992f39d9d981dc76a4d47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d}} 
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!onCreate@{onCreate}}
 \index{onCreate@{onCreate}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{onCreate()}{onCreate()}}
-{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+on\+Create (\begin{DoxyParamCaption}\item[{SQLite\+Database}]{sq\+Lite\+Database }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+on\+Create (\begin{DoxyParamCaption}\item[{SQLite\+Database}]{db }\end{DoxyParamCaption})}
+
+Call if database not exist
 
 
 \begin{DoxyParams}{Parameters}
-{\em sq\+Lite\+Database} & \\
+{\em db} & SQLITE \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00025}{25}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00052}{52}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
-\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a06e86ebba290be6632f24bf5beb91555}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a06e86ebba290be6632f24bf5beb91555}} 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a708a0b725e3a71c00075a2a8927a1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d}} 
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!onUpgrade@{onUpgrade}}
 \index{onUpgrade@{onUpgrade}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
 \doxysubsubsection{\texorpdfstring{onUpgrade()}{onUpgrade()}}
-{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+on\+Upgrade (\begin{DoxyParamCaption}\item[{SQLite\+Database}]{sq\+Lite\+Database,  }\item[{int}]{i,  }\item[{int}]{i1 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+on\+Upgrade (\begin{DoxyParamCaption}\item[{SQLite\+Database}]{db,  }\item[{int}]{old\+Version,  }\item[{int}]{new\+Version }\end{DoxyParamCaption})}
+
+Call if need to update version of database
 
 
 \begin{DoxyParams}{Parameters}
-{\em sq\+Lite\+Database} & \\
+{\em db} & SQLITE \\
 \hline
-{\em i} & \\
+{\em old\+Version} & number of old version db \\
 \hline
-{\em i1} & \\
+{\em new\+Version} & number of new version db \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00038}{38}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00073}{73}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a7d9af3af551d6486da3da6894057bd13}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a7d9af3af551d6486da3da6894057bd13}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!DATABASE\_NAME@{DATABASE\_NAME}}
+\index{DATABASE\_NAME@{DATABASE\_NAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{DATABASE\_NAME}{DATABASE\_NAME}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+NAME = \char`\"{}persons\+DB\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Database name 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00023}{23}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a352dbf8d0a21f543668fc3b20937dca3}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a352dbf8d0a21f543668fc3b20937dca3}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!DATABASE\_VERSION@{DATABASE\_VERSION}}
+\index{DATABASE\_VERSION@{DATABASE\_VERSION}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{DATABASE\_VERSION}{DATABASE\_VERSION}}
+{\footnotesize\ttfamily final int com.\+snail.\+personinfo.\+db.\+DBHelper.\+DATABASE\+\_\+\+VERSION = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+Database version 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00021}{21}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5ffad8da8a10dd8d18a81570f32c5598}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a5ffad8da8a10dd8d18a81570f32c5598}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_AGE@{KEY\_AGE}}
+\index{KEY\_AGE@{KEY\_AGE}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_AGE}{KEY\_AGE}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+AGE = \char`\"{}age\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name age 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00035}{35}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_af6110036ef516d982cbf20b25b838887}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_af6110036ef516d982cbf20b25b838887}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_EMAIL@{KEY\_EMAIL}}
+\index{KEY\_EMAIL@{KEY\_EMAIL}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_EMAIL}{KEY\_EMAIL}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+EMAIL = \char`\"{}email\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name email 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00033}{33}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ace004a593a86ef88c7ad92b82ac6300f}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ace004a593a86ef88c7ad92b82ac6300f}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_GENDER@{KEY\_GENDER}}
+\index{KEY\_GENDER@{KEY\_GENDER}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_GENDER}{KEY\_GENDER}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+GENDER = \char`\"{}gender\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name gender 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00037}{37}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ab27a1464fb718bf82b27cf6ddcd20c7e}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_ab27a1464fb718bf82b27cf6ddcd20c7e}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_ID@{KEY\_ID}}
+\index{KEY\_ID@{KEY\_ID}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_ID}{KEY\_ID}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+ID = \char`\"{}\+\_\+id\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name \+\_\+id 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00027}{27}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a2aeec1b705e9ef86d196b645141c7695}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a2aeec1b705e9ef86d196b645141c7695}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_NAME@{KEY\_NAME}}
+\index{KEY\_NAME@{KEY\_NAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_NAME}{KEY\_NAME}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+NAME = \char`\"{}name\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name name 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00029}{29}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a22cf8ef83fff0556a414ae3d4f20a282}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a22cf8ef83fff0556a414ae3d4f20a282}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!KEY\_SURNAME@{KEY\_SURNAME}}
+\index{KEY\_SURNAME@{KEY\_SURNAME}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{KEY\_SURNAME}{KEY\_SURNAME}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+KEY\+\_\+\+SURNAME = \char`\"{}surname\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Column name surname 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00031}{31}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aff2194d62591f0e5e83ff661b757d7ab}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aff2194d62591f0e5e83ff661b757d7ab}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!logger@{logger}}
+\index{logger@{logger}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} com.\+snail.\+personinfo.\+db.\+DBHelper.\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+logger 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00019}{19}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a3748082e04eb9ffdc1e4f801abc810df}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a3748082e04eb9ffdc1e4f801abc810df}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!TABLE\_PERSONS@{TABLE\_PERSONS}}
+\index{TABLE\_PERSONS@{TABLE\_PERSONS}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{TABLE\_PERSONS}{TABLE\_PERSONS}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+TABLE\+\_\+\+PERSONS = \char`\"{}persons\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Table name for save info about persons 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00025}{25}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a65e658ccc9278fa7c4fdaa2d25f7b10b}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a65e658ccc9278fa7c4fdaa2d25f7b10b}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!TAG@{TAG}}
+\index{TAG@{TAG}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{TAG}{TAG}}
+{\footnotesize\ttfamily final String com.\+snail.\+personinfo.\+db.\+DBHelper.\+TAG = \char`\"{}DBHelper\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+TAG 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00017}{17}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 
 

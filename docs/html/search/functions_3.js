@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['iscorrectageperson_0',['IsCorrectAgePerson',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#acfa57dc2961c60898451d562fc416476',1,'com::snail::personinfo::MainActivity']]],
-  ['iscorrectemailperson_1',['IsCorrectEmailPerson',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a46e643244455c260d3228fd819f8b01f',1,'com::snail::personinfo::MainActivity']]],
-  ['iscorrectfillfields_2',['IsCorrectFillFields',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a2e57a06a02188df09af6eeca5092f782',1,'com::snail::personinfo::MainActivity']]],
-  ['iscorrectpersonname_3',['IsCorrectPersonName',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aecf2e421e0ff4303a84ecdf05d1edf18',1,'com::snail::personinfo::MainActivity']]],
-  ['iscorrectsurname_4',['IsCorrectSurname',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a5b3fce9f4bd57fcf4da9efd2e2a83eaa',1,'com::snail::personinfo::MainActivity']]]
+  ['getage_0',['getAge',['../classcom_1_1snail_1_1personinfo_1_1_person.html#a878eafbd1c9be601240da2864ba7f09f',1,'com::snail::personinfo::Person']]],
+  ['getemail_1',['getEmail',['../classcom_1_1snail_1_1personinfo_1_1_person.html#ac6b0980d574fafc8540a0a56f4eecaab',1,'com::snail::personinfo::Person']]],
+  ['getgender_2',['getGender',['../classcom_1_1snail_1_1personinfo_1_1_person.html#ae36869a8ecc3de522ba87b32c89980dc',1,'com::snail::personinfo::Person']]],
+  ['getname_3',['getName',['../classcom_1_1snail_1_1personinfo_1_1_person.html#a6435952a428bc910fe2bd05e956bdc2a',1,'com::snail::personinfo::Person']]],
+  ['getsurname_4',['getSurname',['../classcom_1_1snail_1_1personinfo_1_1_person.html#a05730e0be58e6ab68d10f2382c87b233',1,'com::snail::personinfo::Person']]]
 ];

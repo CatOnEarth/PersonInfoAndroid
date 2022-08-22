@@ -238,10 +238,10 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.insertPerson(person);
     }
 
-    /**
-     * 
-     * @param textGender
-     * @return
+    /** Convert string gender to byte to save in database
+     *
+     * @param textGender text of gender
+     * @return byte value of gender
      */
     private byte ConvertGenderStrToByte(String textGender) {
         logger.LogInfo(TAG, "call ConvertGenderStrToByte");

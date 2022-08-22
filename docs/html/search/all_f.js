@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['use_5flog_0',['USE_LOG',['../classcom_1_1snail_1_1personinfo_1_1_build_config.html#ad85711561765cd6477f72337cb490d00',1,'com::snail::personinfo::BuildConfig']]],
-  ['useappcontext_1',['useAppContext',['../classcom_1_1snail_1_1personinfo_1_1_example_instrumented_test.html#aa4824e76819bf9e27d48db3e59939509',1,'com::snail::personinfo::ExampleInstrumentedTest']]]
+  ['table_5fpersons_0',['TABLE_PERSONS',['../classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a3748082e04eb9ffdc1e4f801abc810df',1,'com::snail::personinfo::db::DBHelper']]],
+  ['tag_1',['TAG',['../classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a65e658ccc9278fa7c4fdaa2d25f7b10b',1,'com.snail.personinfo.db.DBHelper.TAG()'],['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a90168fc5f7d2203e4659243015d06fb6',1,'com.snail.personinfo.MainActivity.TAG()'],['../classcom_1_1snail_1_1personinfo_1_1_person.html#add584ed9103589666b6ba574e25e41f4',1,'com.snail.personinfo.Person.TAG()']]]
 ];
