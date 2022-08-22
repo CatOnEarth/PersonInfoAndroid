@@ -5,37 +5,23 @@ package com.snail.personinfo;
  */
 public class Person {
 
-    /**
-     * < TAG for class name debug
-     */
+    /** TAG for class name debug */
     private final String TAG = this.getClass().getSimpleName();
-    /**
-     * < user's email
-     */
+    /** user's email */
     protected String email;
-    /**
-     * < user's name
-     */
+    /** user's name */
     protected String name;
-    /**
-     * < user's surname
-     */
+    /** user's surname */
     protected String surname;
-    /**
-     * < user's age
-     */
-    protected int age;
-    /**
-     * < user's gender
-     */
-    protected byte gender;   /**< user's gender*/
+    /** user's age */
+    protected int    age;
+    /** user's gender */
+    protected byte   gender;
 
     /**
      * Default constructor of person
      */
-    public Person() {
-
-    }
+    public Person() {  }
 
     /**
      * Constructor for class Person
@@ -47,11 +33,11 @@ public class Person {
      * @param gender  user's gender
      */
     public Person(String name, String surname, String email, int age, byte gender) {
-        this.name = name;
+        this.name    = name;
         this.surname = surname;
-        this.email = email;
-        this.age = age;
-        this.gender = gender;
+        this.email   = email;
+        this.age     = age;
+        this.gender  = gender;
     }
 
     /**

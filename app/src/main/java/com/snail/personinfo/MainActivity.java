@@ -14,44 +14,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.snail.personinfo.db.DBHelper;
 import com.snail.personinfo.logger.Logger;
 
-/** Activity for save fill and save person info
+/** Activity for fill and save person info
  *
  */
 public class MainActivity extends AppCompatActivity {
-    /**
-     * < TAG for class name debug
-     */
+    /** TAG for class name debug */
     private final String TAG = this.getClass().getSimpleName();
-
-    /**
-     * < Logger
-     */
+    /** Logger */
     private Logger logger;
-
-    /**
-     * < EditText for person name
-     */
+    /** EditText for person name */
     private EditText editTextPersonName;
-    /**
-     * < EditText for person surname
-     */
+    /** EditText for person surname */
     private EditText editTextPersonSurname;
-    /**
-     * < EditText for person emali
-     */
+    /** EditText for person email */
     private EditText editTextPersonEmail;
-    /**
-     * < EditText for person age
-     */
+    /** EditText for person age */
     private EditText editTextPersonAge;
-
-    /**
-     * < Spinner for person gender
-     */
+    /** Spinner for person gender */
     private Spinner spinnerGender;
 
     /** Method onCreate activity person register
@@ -92,10 +76,8 @@ public class MainActivity extends AppCompatActivity {
         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);
     }
 
-    /** Browser for select avatar
-     *
-     */
-    ActivityResultLauncher<Intent> sActiv = registerForActivityResult(
+    /** Browser for select avatar */
+    ActivityResultLauncher<Intent> selectActivityRes = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
@@ -122,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         Intent data = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         data.setType("image/*");
         data = Intent.createChooser(data, "Choose an avatar");
-        sActiv.launch(data);
+        selectActivityRes.launch(data);
     }
 
     /** Function for check input in all fields
@@ -235,7 +217,17 @@ public class MainActivity extends AppCompatActivity {
         Person   person   = new Person(textName, textSurname, textEmail, intAge, byteGender);
         DBHelper dbHelper = new DBHelper(this);
 
-        dbHelper.insertPerson(person);
+        long res_insert = dbHelper.insertPerson(person);
+        if (res_insert == -1) {
+            logger.LogErr(TAG, "Error while insert person in table");
+            Toast.makeText(this, "Error while insert person in table", Toast.LENGTH_LONG).show();
+        } else if (res_insert == -2) {
+            logger.LogInfo(TAG, "Person exist in table");
+            Toast.makeText(this, "Пользователь уже существует", Toast.LENGTH_LONG).show();
+        } else {
+            logger.LogInfo(TAG, "Insert successful");
+            Toast.makeText(this, "Insert successful", Toast.LENGTH_LONG).show();
+        }
     }
 
     /** Convert string gender to byte to save in database

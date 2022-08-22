@@ -1,6 +1,7 @@
 <map id="com.snail.personinfo.Person.getGender" name="com.snail.personinfo.Person.getGender">
-<area shape="rect" id="node1" title=" " alt="" coords="659,5,867,47"/>
-<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#add43267f69d992f39d9d981dc76a4d47" title=" " alt="" coords="448,5,611,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="869,5,1077,47"/>
+<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#aea25532e38a4495f54973666bb3f72a2" title=" " alt="" coords="448,5,611,47"/>
+<area shape="rect" id="node5" href="$classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#aa43cde57e324cc68d2236eb22470d7d8" title=" " alt="" coords="659,35,821,76"/>
 <area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aa68a6b1ff861ba89b341886d2d841130" title=" " alt="" coords="227,5,400,47"/>
 <area shape="rect" id="node4" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a65783ced64e86f51769bf17443dbe508" title=" " alt="" coords="5,5,179,47"/>
 </map>

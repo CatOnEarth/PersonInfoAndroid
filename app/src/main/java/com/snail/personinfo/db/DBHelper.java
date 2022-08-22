@@ -1,10 +1,11 @@
 package com.snail.personinfo.db;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.snail.personinfo.logger.Logger;
 import com.snail.personinfo.Person;
@@ -12,7 +13,7 @@ import com.snail.personinfo.Person;
 /** Class for work with Database SQLITE
  *
  */
-public class DBHelper  extends SQLiteOpenHelper{
+public class DBHelper  extends SQLiteOpenHelper {
     /** TAG */
     private final String TAG = "DBHelper";
     /** logger */
@@ -72,18 +73,22 @@ public class DBHelper  extends SQLiteOpenHelper{
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + TABLE_PERSONS);
-
         onCreate(db);
-
     }
 
-    /**Insert new person in person table
+    /** Insert new person in person table
      *
      * @param person Object person, who need to add
+     *
+     * @return error: -1; -2: person exist in table; another: ok
      */
-    public void insertPerson(Person person) {
+    public long insertPerson(Person person) {
         logger = new Logger();
         logger.LogInfo(TAG, "call insertPerson");
+
+        if (IsPersonExist(person)) {
+            return -2;
+        }
 
         ContentValues contentValues = new ContentValues();
 
@@ -95,10 +100,52 @@ public class DBHelper  extends SQLiteOpenHelper{
 
         SQLiteDatabase database = getWritableDatabase();
         long res_insert         = database.insert(TABLE_PERSONS, null, contentValues);
+
         if (res_insert == -1) {
             logger.LogErr(TAG, "insert person error");
         } else {
             logger.LogInfo(TAG, "insert person success");
         }
+
+        database.close();
+
+        return res_insert;
+    }
+
+    /** Select person from person table
+     *
+     * @param person Object person, who need to select
+     *
+     * @return Selected person from person table
+     */
+    public Person selectPerson(Person person) {
+        return new Person("NULL", "NULL", "NULL", -1, (byte) -1);
+    }
+
+    /** Check if person exist in person table
+     *
+     * @param person Object person, who need to find
+     * @return true - exist; false - not exist
+     */
+    public boolean IsPersonExist(Person person) {
+        SQLiteDatabase database = getWritableDatabase();
+        @SuppressLint("Recycle") Cursor cursor = database.query(TABLE_PERSONS, null,
+                KEY_NAME + " = ? AND " +
+                KEY_SURNAME   + " = ? AND "          +
+                KEY_EMAIL     + " = ? AND "          +
+                KEY_AGE       + " = ? AND "          +
+                KEY_GENDER    + " = ? "              ,
+                new String[] {person.getName()                   ,
+                              person.getSurname()                ,
+                              person.getEmail()                  ,
+                              String.valueOf(person.getAge())    ,
+                              String.valueOf(person.getGender()) },
+                null, null, null);
+
+        boolean isExist = cursor.moveToFirst();
+        cursor.close();
+        database.close();
+
+        return isExist;
     }
 }
