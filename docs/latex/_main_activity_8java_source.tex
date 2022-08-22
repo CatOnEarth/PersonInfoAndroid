@@ -1,0 +1,144 @@
+\hypertarget{_main_activity_8java_source}{}\doxysection{Main\+Activity.\+java}
+\label{_main_activity_8java_source}\index{app/src/main/java/com/snail/personinfo/MainActivity.java@{app/src/main/java/com/snail/personinfo/MainActivity.java}}
+\mbox{\hyperlink{_main_activity_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00001}00001 \textcolor{keyword}{package }com.snail.personinfo;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00003}00003 \textcolor{keyword}{import} androidx.appcompat.app.AppCompatActivity;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00005}00005 \textcolor{keyword}{import} android.os.Bundle;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00006}00006 \textcolor{keyword}{import} android.view.View;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00007}00007 \textcolor{keyword}{import} android.widget.Button;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00008}00008 \textcolor{keyword}{import} android.widget.EditText;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00009}00009 \textcolor{keyword}{import} android.widget.Spinner;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00011}00011 \textcolor{keyword}{import} com.snail.personinfo.logger.Logger;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00016}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{MainActivity}} \textcolor{keyword}{extends} AppCompatActivity \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00020}00020     \textcolor{keyword}{private} \textcolor{keyword}{final} String TAG = this.getClass().getSimpleName();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00025}00025     \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} logger;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00030}00030     \textcolor{keyword}{private} EditText editTextPersonName;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00034}00034     \textcolor{keyword}{private} EditText editTextPersonSurname;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00038}00038     \textcolor{keyword}{private} EditText editTextPersonEmail;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00042}00042     \textcolor{keyword}{private} EditText editTextPersonAge;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00047}00047     \textcolor{keyword}{private} Spinner spinnerGender;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00053}00053     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00054}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{00054}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{onCreate}}(Bundle savedInstanceState) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00055}00055         super.onCreate(savedInstanceState);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00056}00056         setContentView(R.layout.activity\_main);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00058}00058         logger = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00059}00059         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call onCreate"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00061}00061         editTextPersonName    = findViewById(R.id.editTextPersonName);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00062}00062         editTextPersonSurname = findViewById(R.id.editTextSurname);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00063}00063         editTextPersonEmail   = findViewById(R.id.editTextEmailPerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00064}00064         editTextPersonAge     = findViewById(R.id.editTextAgePerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00066}00066         spinnerGender         = findViewById(R.id.spinnerGenders);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00068}00068         Button bReg           = findViewById(R.id.buttonRegisterPerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00070}00070         View.OnClickListener regBtnClick = view -\/> \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00071}00071             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Click reg button"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00072}00072             \textcolor{keywordflow}{if} (IsCorrectFillFields()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00073}00073                 RegisterPerson();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00074}00074             \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00075}00075         \};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00077}00077         bReg.setOnClickListener(regBtnClick);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00084}00084     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} IsCorrectFillFields() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00085}00085         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectFillFields"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00087}00087         \textcolor{keywordtype}{boolean} IsError = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00089}00089         \textcolor{keywordflow}{if} (!IsCorrectPersonName()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00090}00090             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect name"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00091}00091             editTextPersonName.setError(\textcolor{stringliteral}{"{}Неправильное имя"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00092}00092             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00094}00094         \textcolor{keywordflow}{if} (!IsCorrectSurname()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00095}00095             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect surname"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00096}00096             editTextPersonSurname.setError(\textcolor{stringliteral}{"{}Неправильная фамилия"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00097}00097             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00098}00098         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00099}00099         \textcolor{keywordflow}{if} (!IsCorrectEmailPerson()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00100}00100             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect email"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00101}00101             editTextPersonEmail.setError(\textcolor{stringliteral}{"{}Неправильный email"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00102}00102             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00103}00103         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104         \textcolor{keywordflow}{if} (!IsCorrectAgePerson()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect age"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00106}00106             editTextPersonAge.setError(\textcolor{stringliteral}{"{}Некорректный возраст"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00107}00107             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00110}00110         \textcolor{keywordflow}{return} !IsError;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00111}00111     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00117}00117     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} IsCorrectPersonName() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00118}00118         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectPersonName"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00120}00120         String textName = editTextPersonName.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00121}00121         \textcolor{keywordflow}{return} textName.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00128}00128     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} IsCorrectSurname() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00129}00129         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectSurname"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00131}00131         String textSurname = editTextPersonSurname.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00132}00132         \textcolor{keywordflow}{return} textSurname.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00139}00139     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} IsCorrectEmailPerson() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00140}00140         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectEmailPerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00142}00142         String textEmail = editTextPersonEmail.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00143}00143         \textcolor{keywordflow}{return} textEmail.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00150}00150     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} IsCorrectAgePerson() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00151}00151         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectAgePerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00153}00153         String textAge = editTextPersonAge.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00154}00154         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00155}00155             \textcolor{keywordtype}{int} age = Integer.parseInt(textAge);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00156}00156             \textcolor{keywordflow}{if} (age <= 0 || age > 200) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00157}00157                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00158}00158             \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00159}00159         \} \textcolor{keywordflow}{catch}  (NumberFormatException ex) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00160}00160             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}catch exception age converting string to int"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00162}00162             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00163}00163         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00165}00165         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00166}00166     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00171}00171     \textcolor{keyword}{private} \textcolor{keywordtype}{void} RegisterPerson() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00172}00172         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call RegisterPerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00174}00174         String textName     = editTextPersonName.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00175}00175         String textSurname  = editTextPersonSurname.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00176}00176         String textEmail    = editTextPersonEmail.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00177}00177         String textAge      = editTextPersonAge.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00178}00178         String textGender   = spinnerGender.getSelectedItem().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00180}00180         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person Info:  Name: "{}}    + textName    + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00181}00181                                                    \textcolor{stringliteral}{"{}Surname: "{}} + textSurname + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00182}00182                                                    \textcolor{stringliteral}{"{}Email: "{}}   + textEmail   + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00183}00183                                                    \textcolor{stringliteral}{"{}Age: "{}}     + textAge     + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00184}00184                                                    \textcolor{stringliteral}{"{}Gender: "{}}  + textGender);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00188}00188     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00189}00189 \}}
+
+\end{DoxyCode}

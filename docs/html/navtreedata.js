@@ -24,7 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "PersonInfoAndroid", "index.html", [
+  [ "PersonAndroidDocumentation", "index.html", [
+    [ "PersonInfoAndroid", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", null ]
     ] ],
@@ -37,13 +38,16 @@ var NAVTREE =
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_contact_database_8java.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

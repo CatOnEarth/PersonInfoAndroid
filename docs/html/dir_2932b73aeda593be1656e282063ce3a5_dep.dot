@@ -10,6 +10,7 @@ digraph "app/build/generated/source/buildConfig"
     graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_2932b73aeda593be1656e282063ce3a5.html"]
     dir_2932b73aeda593be1656e282063ce3a5 [shape=plaintext, label="buildConfig"];
   dir_2fff6f08598ce93bef2c7824b4a19591 [shape=box, label="debug", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_2fff6f08598ce93bef2c7824b4a19591.html"];
+  dir_e568300425302888e15488406f92ad6c [shape=box, label="release", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_e568300425302888e15488406f92ad6c.html"];
   }
   }
 }

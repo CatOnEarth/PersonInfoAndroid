@@ -10,19 +10,46 @@ import android.widget.Spinner;
 
 import com.snail.personinfo.logger.Logger;
 
+/** Activity for save fill and save person info
+ *
+ */
 public class MainActivity extends AppCompatActivity {
-
+    /**
+     * < TAG for class name debug
+     */
     private final String TAG = this.getClass().getSimpleName();
 
+    /**
+     * < Logger
+     */
     Logger logger;
 
+    /**
+     * < EditText for person name
+     */
     private EditText editTextPersonName;
+    /**
+     * < EditText for person surname
+     */
     private EditText editTextPersonSurname;
+    /**
+     * < EditText for person emali
+     */
     private EditText editTextPersonEmail;
+    /**
+     * < EditText for person age
+     */
     private EditText editTextPersonAge;
 
+    /**
+     * < Spinner for person gender
+     */
     private Spinner spinnerGender;
 
+    /** Method onCreate activity person register
+     *
+     * @param savedInstanceState saved last activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
         bReg.setOnClickListener(regBtnClick);
     }
 
+    /** Function for check input in all fields
+     *
+     * @return true - correct input; false - incorrect input
+     */
     private boolean IsCorrectFillFields() {
         logger.LogInfo(TAG, "call IsCorrectFillFields");
 
@@ -79,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
         return !IsError;
     }
 
+    /**
+     * Function for check correction person name field
+     * @return true - correct input; false - incorrect input
+     */
     private boolean IsCorrectPersonName() {
         logger.LogInfo(TAG, "call IsCorrectPersonName");
 
@@ -86,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
         return textName.length() != 0;
     }
 
+    /**
+     * Function for check correction person surname field
+     * @return true - correct input; false - incorrect input
+     */
     private boolean IsCorrectSurname() {
         logger.LogInfo(TAG, "call IsCorrectSurname");
 
@@ -93,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
         return textSurname.length() != 0;
     }
 
+    /**
+     * Function for check correction person email field
+     * @return true - correct input; false - incorrect input
+     */
     private boolean IsCorrectEmailPerson() {
         logger.LogInfo(TAG, "call IsCorrectEmailPerson");
 
@@ -100,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
         return textEmail.length() != 0;
     }
 
+    /**
+     * Function for check correction person age field
+     * @return true - correct input; false - incorrect input
+     */
     private boolean IsCorrectAgePerson() {
         logger.LogInfo(TAG, "call IsCorrectAgePerson");
 
@@ -118,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /** Method for register person in database
+     *
+     */
     private void RegisterPerson() {
         logger.LogInfo(TAG, "call RegisterPerson");
 
