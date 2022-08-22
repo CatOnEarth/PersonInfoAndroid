@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <LinearLayout
+ <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
@@ -25,84 +21,88 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textViewPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Имя пользователя" />
+                android:text="@string/TextPersonname" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Имя"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Фамилия пользователя" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Фамилия"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="email пользователя" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Email"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Укажите возраст" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
+                android:hint="@string/HintPersonName"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:hint="Возраст" />
+                android:autofillHints="name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TextSurname" />
+
+            <EditText
+                android:id="@+id/editTextSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/HintSurname"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:autofillHints="username"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewEmailPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TextEmailPerson" />
+
+            <EditText
+                android:id="@+id/editTextEmailPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/HintEmailPerson"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:autofillHints="emailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAgePerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TextAgePerson" />
+
+            <EditText
+                android:id="@+id/editTextAgePerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:ems="10"
+                android:hint="@string/HintAgePerson"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <androidx.gridlayout.widget.GridLayout
@@ -112,14 +112,14 @@
             android:layout_marginBottom="10dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textViewPersonGender"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Выберите пол:" />
+                android:text="@string/TextGenderPerson" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spinnerGenders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
@@ -129,11 +129,10 @@
         </androidx.gridlayout.widget.GridLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonRegisterPerson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/ButtonRegisterPerson" />
 
     </LinearLayout>
 
-</RelativeLayout>

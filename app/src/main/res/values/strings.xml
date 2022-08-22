@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">PersonInfo</string>
+    <string name="TextPersonname">Имя пользователя</string>
+    <string name="HintPersonName">Имя</string>
+    <string name="TextSurname">Фамилия пользователя</string>
+    <string name="HintSurname">Фамилия</string>
+    <string name="TextEmailPerson">email пользователя</string>
+    <string name="HintEmailPerson">Email</string>
+    <string name="TextAgePerson">Укажите возраст</string>
+    <string name="HintAgePerson">Возраст</string>
+    <string name="TextGenderPerson">Выберите пол:</string>
+    <string name="ButtonRegisterPerson">Зарегистрировать</string>
     <string-array name="genderTypes">
         <item>Не указан</item>
         <item>Мужской</item>

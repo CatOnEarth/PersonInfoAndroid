@@ -5,6 +5,11 @@ import android.util.Log;
 import com.snail.personinfo.BuildConfig;
 
 public class Logger {
+
+    public Logger() {
+        Log.i("Logger", "Create object Logger");
+    }
+
     public void LogErr(String tag, String message) {
         if (BuildConfig.USE_LOG) {
             Log.e(tag, message);
