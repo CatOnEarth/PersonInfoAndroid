@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PersonInfo</string>
+    <string-array name="genderTypes">
+        <item>Не указан</item>
+        <item>Мужской</item>
+        <item>Женский</item>
+        <item>Неопределённый</item>
+    </string-array>
 </resources>

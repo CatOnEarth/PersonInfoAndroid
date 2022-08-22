@@ -4,6 +4,11 @@ package com.snail.personinfo;
  *
  */
 public class Person {
+
+    /**
+     * < TAG for class name debug
+     */
+    private final String TAG = this.getClass().getSimpleName();
     /**
      * < user's email
      */
