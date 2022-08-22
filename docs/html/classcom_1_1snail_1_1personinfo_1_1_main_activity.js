@@ -6,6 +6,7 @@ var classcom_1_1snail_1_1personinfo_1_1_main_activity =
     [ "IsCorrectPersonName", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aecf2e421e0ff4303a84ecdf05d1edf18", null ],
     [ "IsCorrectSurname", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a5b3fce9f4bd57fcf4da9efd2e2a83eaa", null ],
     [ "onCreate", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a65783ced64e86f51769bf17443dbe508", null ],
+    [ "openFileDialog", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#ae770fe6b4aed51af9317e60a6841c0d7", null ],
     [ "RegisterPerson", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aa68a6b1ff861ba89b341886d2d841130", null ],
     [ "editTextPersonAge", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a93651563fb4e71880511950132e5905e", null ],
     [ "editTextPersonEmail", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a8022c25c2191ed513c3c8659ef502010", null ],

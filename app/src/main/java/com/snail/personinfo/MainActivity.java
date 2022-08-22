@@ -1,7 +1,14 @@
 package com.snail.personinfo;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -66,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerGender         = findViewById(R.id.spinnerGenders);
 
         Button bReg           = findViewById(R.id.buttonRegisterPerson);
+        Button bSelectAvatar  = findViewById(R.id.buttonSelectAvatar);
 
         View.OnClickListener regBtnClick = view -> {
             logger.LogInfo(TAG, "Click reg button");
@@ -74,7 +82,42 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener selectAvatarBtnClick = view -> {
+            logger.LogInfo(TAG, "Click select avatar button");
+            openFileDialog(view);
+        };
+
         bReg.setOnClickListener(regBtnClick);
+        bSelectAvatar.setOnClickListener(selectAvatarBtnClick);
+    }
+
+    /**
+     * 
+     */
+    ActivityResultLauncher<Intent> sActiv = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            Uri uri = data.getData();
+                        }
+                    }
+                }
+            }
+    );
+
+    /**
+     *
+     * @param view
+     */
+    public void openFileDialog(View view) {
+        Intent data = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        data.setType("image/*");
+        data = Intent.createChooser(data, "Choose an avatar");
+        sActiv.launch(data);
     }
 
     /** Function for check input in all fields

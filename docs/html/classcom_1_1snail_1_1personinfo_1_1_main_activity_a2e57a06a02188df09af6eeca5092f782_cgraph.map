@@ -1,9 +1,5 @@
 <map id="com.snail.personinfo.MainActivity.IsCorrectFillFields" name="com.snail.personinfo.MainActivity.IsCorrectFillFields">
-<area shape="rect" id="node1" title=" " alt="" coords="5,156,179,197"/>
-<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#acfa57dc2961c60898451d562fc416476" title=" " alt="" coords="232,5,416,47"/>
-<area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#a5cf3890060633cb2b26fc94b42bdefea" title=" " alt="" coords="469,123,653,164"/>
-<area shape="rect" id="node4" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a46e643244455c260d3228fd819f8b01f" title=" " alt="" coords="227,123,421,164"/>
-<area shape="rect" id="node5" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#aecf2e421e0ff4303a84ecdf05d1edf18" title=" " alt="" coords="227,188,421,229"/>
-<area shape="rect" id="node6" href="$classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a5b3fce9f4bd57fcf4da9efd2e2a83eaa" title=" " alt="" coords="237,253,411,295"/>
-<area shape="rect" id="node7" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#aeed9e9ef1934883b8f8aa3061e8d95eb" title=" " alt="" coords="232,319,416,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,179,80"/>
+<area shape="rect" id="node2" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#aeed9e9ef1934883b8f8aa3061e8d95eb" title=" " alt="" coords="227,5,411,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html#a5cf3890060633cb2b26fc94b42bdefea" title=" " alt="" coords="227,71,411,112"/>
 </map>

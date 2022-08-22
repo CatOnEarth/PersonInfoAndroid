@@ -1,7 +1,8 @@
 <map id="com.snail.personinfo.MainActivity" name="com.snail.personinfo.MainActivity">
-<area shape="rect" id="node1" title=" " alt="" coords="223,153,397,195"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,137,39"/>
-<area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html" title=" " alt="" coords="162,5,346,47"/>
-<area shape="rect" id="node4" title=" " alt="" coords="371,13,441,39"/>
-<area shape="rect" id="node5" title=" " alt="" coords="505,13,571,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="377,146,551,187"/>
+<area shape="rect" id="node2" title=" " alt="" coords="31,5,163,32"/>
+<area shape="rect" id="node3" href="$classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger.html" title=" " alt="" coords="5,57,189,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="62,151,133,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="64,201,131,228"/>
+<area shape="rect" id="node6" title=" " alt="" coords="20,253,175,294"/>
 </map>
