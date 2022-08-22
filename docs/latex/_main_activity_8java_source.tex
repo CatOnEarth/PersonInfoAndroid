@@ -14,235 +14,237 @@
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00010}00010 \textcolor{keyword}{import} android.content.Intent;}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00011}00011 \textcolor{keyword}{import} android.net.Uri;}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00012}00012 \textcolor{keyword}{import} android.os.Bundle;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00013}00013 \textcolor{keyword}{import} android.view.View;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00014}00014 \textcolor{keyword}{import} android.widget.Button;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00015}00015 \textcolor{keyword}{import} android.widget.EditText;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00016}00016 \textcolor{keyword}{import} android.widget.Spinner;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00017}00017 \textcolor{keyword}{import} android.widget.Toast;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00018}00018 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00019}00019 \textcolor{keyword}{import} com.snail.personinfo.db.DBHelper;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00020}00020 \textcolor{keyword}{import} com.snail.personinfo.logger.Logger;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00022}00022 \textcolor{keyword}{import} java.util.ArrayList;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00027}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{00027}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{MainActivity}} \textcolor{keyword}{extends} AppCompatActivity \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00029}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{00029}}     \textcolor{keyword}{private} \textcolor{keyword}{final} String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}} = this.getClass().getSimpleName();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00031}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{00031}}     \textcolor{keyword}{private} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00033}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{00033}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{editTextPersonName}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00035}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{00035}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{editTextPersonSurname}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00037}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{00037}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{editTextPersonEmail}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00039}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{00039}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{editTextPersonAge}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00041}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{00041}}     \textcolor{keyword}{private} Spinner \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{spinnerGender}};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00047}00047     @Override}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00048}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{00048}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{onCreate}}(Bundle savedInstanceState) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00049}00049         super.onCreate(savedInstanceState);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00050}00050         setContentView(R.layout.activity\_main);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00051}00051 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00052}00052         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}} = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00053}00053         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call onCreate"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00054}00054 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00055}00055         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{editTextPersonName}}    = findViewById(R.id.editTextPersonName);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00056}00056         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{editTextPersonSurname}} = findViewById(R.id.editTextSurname);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00057}00057         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{editTextPersonEmail}}   = findViewById(R.id.editTextEmailPerson);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00058}00058         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{editTextPersonAge}}     = findViewById(R.id.editTextAgePerson);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00060}00060         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{spinnerGender}}         = findViewById(R.id.spinnerGenders);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00062}00062         Button bReg            = findViewById(R.id.buttonRegisterPerson);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00063}00063         Button bSelectAvatar   = findViewById(R.id.buttonSelectAvatar);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00064}00064         Button bClearDB        = findViewById(R.id.buttonClearDB);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00065}00065         Button bShowAllPersons = findViewById(R.id.buttonShowAllPersons);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00066}00066 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00067}00067         View.OnClickListener regBtnClick = view -\/> \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00068}00068             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click reg button"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00069}00069             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{IsCorrectFillFields}}()) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00070}00070                 \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{RegisterPerson}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00071}00071             \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00072}00072         \};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00074}00074         View.OnClickListener selectAvatarBtnClick = view -\/> \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00075}00075             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click select avatar button"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00076}00076             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{openFileDialog}}(view);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00077}00077         \};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00078}00078 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00079}00079         View.OnClickListener clearDbBtnClick = view -\/> \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00080}00080             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click clear db button"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00081}00081             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{clearDB}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00082}00082         \};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00083}00083 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00084}00084         View.OnClickListener showAllPersonsBtnClick = view -\/> \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00085}00085             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click show all persons button"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00086}00086             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{showAllPersons}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00087}00087         \};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00089}00089         bReg.setOnClickListener(regBtnClick);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00090}00090         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00091}00091         bClearDB.setOnClickListener(clearDbBtnClick);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00092}00092         bShowAllPersons.setOnClickListener(showAllPersonsBtnClick);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00093}00093     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00098}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{00098}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{showAllPersons}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00099}00099         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call showAllPersons"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00100}00100         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00101}00101         ArrayList<Person> persons = dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aa0a8ecdc27d90bcd2096b226ba4ae494}{selectAllPersons}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00102}00102 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00103}00103         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii = 0; ii < persons.size(); ++ii) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Person №"{}} + ii + \textcolor{stringliteral}{"{}. Name: "{}} + persons.get(ii).getName() +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105                     \textcolor{stringliteral}{"{}; Surname: "{}} + persons.get(ii).getSurname() + \textcolor{stringliteral}{"{}; Email: "{}} + persons.get(ii).getEmail() + \textcolor{stringliteral}{"{}; Age: "{}} + persons.get(ii).getAge() +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00106}00106                     \textcolor{stringliteral}{"{}; Gender: "{}} + String.valueOf(persons.get(ii).getGender()), Toast.LENGTH\_LONG).show();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00107}00107         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00108}00108     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00109}00109 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00113}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{00113}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{clearDB}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00114}00114         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call clearDB"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00115}00115         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00116}00116         dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e}{deleteDB}}();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00117}00117 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00118}00118         Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}База данных очищена"{}}, Toast.LENGTH\_LONG).show();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00119}00119     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00120}00120 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00122}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}{00122}}     ActivityResultLauncher<Intent> \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}{selectActivityRes}} = registerForActivityResult(}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00123}00123             \textcolor{keyword}{new} ActivityResultContracts.StartActivityForResult(),}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00124}00124             \textcolor{keyword}{new} ActivityResultCallback<ActivityResult>() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00125}00125                 @Override}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00126}00126                 public void onActivityResult(ActivityResult result) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00127}00127                     logger.LogInfo(TAG, \textcolor{stringliteral}{"{}call onActivityResult"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00128}00128 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00129}00129                     if (result.getResultCode() == Activity.RESULT\_OK) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00130}00130                         Intent data = result.getData();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00131}00131                         if (data != null) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00132}00132                             Uri uri = data.getData();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00133}00133                         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00134}00134                     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00135}00135                 \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00136}00136             \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00137}00137     );}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00138}00138 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00143}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{00143}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{openFileDialog}}(View view) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00144}00144         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call openFileDialog"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00145}00145 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00146}00146         Intent data = \textcolor{keyword}{new} Intent(Intent.ACTION\_OPEN\_DOCUMENT);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00147}00147         data.setType(\textcolor{stringliteral}{"{}image/*"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00148}00148         data = Intent.createChooser(data, \textcolor{stringliteral}{"{}Choose an avatar"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00149}00149         selectActivityRes.launch(data);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00150}00150     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00151}00151 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00157}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{00157}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{IsCorrectFillFields}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00158}00158         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectFillFields"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00159}00159 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00160}00160         \textcolor{keywordtype}{boolean} IsError = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00013}00013 \textcolor{keyword}{import} android.util.Log;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00014}00014 \textcolor{keyword}{import} android.view.View;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00015}00015 \textcolor{keyword}{import} android.widget.Button;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00016}00016 \textcolor{keyword}{import} android.widget.EditText;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00017}00017 \textcolor{keyword}{import} android.widget.Spinner;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00018}00018 \textcolor{keyword}{import} android.widget.Toast;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00020}00020 \textcolor{keyword}{import} com.snail.personinfo.db.DBHelper;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00021}00021 \textcolor{keyword}{import} com.snail.personinfo.logger.Logger;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00023}00023 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00028}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{00028}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity}{MainActivity}} \textcolor{keyword}{extends} AppCompatActivity \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00030}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{00030}}     \textcolor{keyword}{private} \textcolor{keyword}{final} String \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}} = this.getClass().getSimpleName();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00032}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{00032}}     \textcolor{keyword}{private} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00034}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{00034}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{editTextPersonName}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00036}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{00036}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{editTextPersonSurname}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00038}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{00038}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{editTextPersonEmail}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00040}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{00040}}     \textcolor{keyword}{private} EditText \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{editTextPersonAge}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00042}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{00042}}     \textcolor{keyword}{private} Spinner \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{spinnerGender}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00048}00048     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00049}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{00049}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a65783ced64e86f51769bf17443dbe508}{onCreate}}(Bundle savedInstanceState) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00050}00050         super.onCreate(savedInstanceState);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00051}00051         setContentView(R.layout.activity\_main);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00053}00053         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}} = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger}{Logger}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00054}00054         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call onCreate"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00056}00056         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a86ce7869f827c1a04d0fd41d0496aa1e}{editTextPersonName}}    = findViewById(R.id.editTextPersonName);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00057}00057         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acd3c018ffcc30bb54e4f6b84c5075862}{editTextPersonSurname}} = findViewById(R.id.editTextSurname);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00058}00058         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a8022c25c2191ed513c3c8659ef502010}{editTextPersonEmail}}   = findViewById(R.id.editTextEmailPerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00059}00059         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a93651563fb4e71880511950132e5905e}{editTextPersonAge}}     = findViewById(R.id.editTextAgePerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00061}00061         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4e74dfe6607dfb1d749832fc5eb9f1b6}{spinnerGender}}         = findViewById(R.id.spinnerGenders);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00063}00063         Button bReg            = findViewById(R.id.buttonRegisterPerson);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00064}00064         Button bSelectAvatar   = findViewById(R.id.buttonSelectAvatar);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00065}00065         Button bClearDB        = findViewById(R.id.buttonClearDB);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00066}00066         Button bShowAllPersons = findViewById(R.id.buttonShowAllPersons);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00068}00068         View.OnClickListener regBtnClick = view -\/> \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00069}00069             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click reg button"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00070}00070             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{IsCorrectFillFields}}()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00071}00071                 \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{RegisterPerson}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00072}00072             \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00073}00073         \};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00075}00075         View.OnClickListener selectAvatarBtnClick = view -\/> \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00076}00076             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click select avatar button"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00077}00077             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{openFileDialog}}(view);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00078}00078         \};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00080}00080         View.OnClickListener clearDbBtnClick = view -\/> \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00081}00081             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click clear db button"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00082}00082             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{clearDB}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00083}00083         \};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00085}00085         View.OnClickListener showAllPersonsBtnClick = view -\/> \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00086}00086             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}Click show all persons button"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00087}00087             \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{showAllPersons}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00088}00088         \};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00090}00090         bReg.setOnClickListener(regBtnClick);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00091}00091         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00092}00092         bClearDB.setOnClickListener(clearDbBtnClick);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00093}00093         bShowAllPersons.setOnClickListener(showAllPersonsBtnClick);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00099}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{00099}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a0b36371750155b061eeefe511f414ed6}{showAllPersons}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00100}00100         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call showAllPersons"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00101}00101         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00102}00102         ArrayList<Person> persons = dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aa0a8ecdc27d90bcd2096b226ba4ae494}{selectAllPersons}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii = 0; ii < persons.size(); ++ii) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Person №"{}} + ii + \textcolor{stringliteral}{"{}. Name: "{}} + persons.get(ii).getName() +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00106}00106                     \textcolor{stringliteral}{"{}; Surname: "{}} + persons.get(ii).getSurname() + \textcolor{stringliteral}{"{}; Email: "{}} + persons.get(ii).getEmail() + \textcolor{stringliteral}{"{}; Age: "{}} + persons.get(ii).getAge() +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00107}00107                     \textcolor{stringliteral}{"{}; Gender: "{}} + String.valueOf(persons.get(ii).getGender()), Toast.LENGTH\_LONG).show();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00114}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{00114}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_afe482d0fed14a69943e35ac4ec34ba1b}{clearDB}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00115}00115         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a4cf97e15fdd4c41a64acc5a8ce986aaa}{logger}}.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a90168fc5f7d2203e4659243015d06fb6}{TAG}}, \textcolor{stringliteral}{"{}call clearDB"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00116}00116         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00117}00117         dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e}{deleteDB}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00119}00119         Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}База данных очищена"{}}, Toast.LENGTH\_LONG).show();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00123}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}{00123}}     ActivityResultLauncher<Intent> \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aabcb5f08dfd82159cfa71bbc5f006f7d}{selectActivityRes}} = registerForActivityResult(}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00124}00124             \textcolor{keyword}{new} ActivityResultContracts.StartActivityForResult(),}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00125}00125             \textcolor{keyword}{new} ActivityResultCallback<ActivityResult>() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00126}00126                 @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00127}00127                 public void onActivityResult(ActivityResult result) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00128}00128                     logger.LogInfo(TAG, \textcolor{stringliteral}{"{}call onActivityResult"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00130}00130                     if (result.getResultCode() == Activity.RESULT\_OK) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00131}00131                         Intent data = result.getData();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00132}00132                         if (data != null) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00133}00133                             Uri uri = data.getData();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00134}00134                             logger.LogInfo(TAG, String.valueOf(uri));}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00135}00135                         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00136}00136                     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00137}00137                 \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00138}00138             \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00139}00139     );}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00145}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{00145}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_ae770fe6b4aed51af9317e60a6841c0d7}{openFileDialog}}(View view) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00146}00146         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call openFileDialog"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00148}00148         Intent data = \textcolor{keyword}{new} Intent(Intent.ACTION\_OPEN\_DOCUMENT);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00149}00149         data.setType(\textcolor{stringliteral}{"{}image/*"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00150}00150         data = Intent.createChooser(data, \textcolor{stringliteral}{"{}Choose an avatar"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00151}00151         selectActivityRes.launch(data);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00152}00152     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00159}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{00159}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a2e57a06a02188df09af6eeca5092f782}{IsCorrectFillFields}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00160}00160         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectFillFields"{}});}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00161}00161 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00162}00162         \textcolor{keywordflow}{if} (!IsCorrectPersonName()) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00163}00163             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect name"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00164}00164             editTextPersonName.setError(\textcolor{stringliteral}{"{}Неправильное имя"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00165}00165             IsError = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00166}00166         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00167}00167         \textcolor{keywordflow}{if} (!IsCorrectSurname()) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00168}00168             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect surname"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00169}00169             editTextPersonSurname.setError(\textcolor{stringliteral}{"{}Неправильная фамилия"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00170}00170             IsError = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00171}00171         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00172}00172         \textcolor{keywordflow}{if} (!IsCorrectEmailPerson()) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00173}00173             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect email"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00174}00174             editTextPersonEmail.setError(\textcolor{stringliteral}{"{}Неправильный email"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00175}00175             IsError = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00176}00176         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00177}00177         \textcolor{keywordflow}{if} (!IsCorrectAgePerson()) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00178}00178             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect age"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00179}00179             editTextPersonAge.setError(\textcolor{stringliteral}{"{}Некорректный возраст"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00180}00180             IsError = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00181}00181         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00182}00182 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00183}00183         \textcolor{keywordflow}{return} !IsError;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00184}00184     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00185}00185 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00191}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aecf2e421e0ff4303a84ecdf05d1edf18}{00191}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aecf2e421e0ff4303a84ecdf05d1edf18}{IsCorrectPersonName}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00192}00192         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectPersonName"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00193}00193 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00194}00194         String textName = editTextPersonName.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00195}00195         \textcolor{keywordflow}{return} textName.length() != 0;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00196}00196     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00197}00197 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00203}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a5b3fce9f4bd57fcf4da9efd2e2a83eaa}{00203}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a5b3fce9f4bd57fcf4da9efd2e2a83eaa}{IsCorrectSurname}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00204}00204         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectSurname"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00205}00205 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00206}00206         String textSurname = editTextPersonSurname.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00207}00207         \textcolor{keywordflow}{return} textSurname.length() != 0;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00208}00208     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00209}00209 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00215}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a46e643244455c260d3228fd819f8b01f}{00215}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a46e643244455c260d3228fd819f8b01f}{IsCorrectEmailPerson}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00216}00216         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectEmailPerson"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00217}00217 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00218}00218         String textEmail = editTextPersonEmail.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00219}00219         \textcolor{keywordflow}{return} textEmail.length() != 0;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00220}00220     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00221}00221 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00227}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acfa57dc2961c60898451d562fc416476}{00227}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acfa57dc2961c60898451d562fc416476}{IsCorrectAgePerson}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00228}00228         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectAgePerson"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00229}00229 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00230}00230         String textAge = editTextPersonAge.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00231}00231         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00232}00232             \textcolor{keywordtype}{int} age = Integer.parseInt(textAge);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00233}00233             \textcolor{keywordflow}{if} (age <= 0 || age > 200) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00234}00234                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00235}00235             \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00236}00236         \} \textcolor{keywordflow}{catch}  (NumberFormatException ex) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00237}00237             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}catch exception age converting string to int"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00238}00238 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00239}00239             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00240}00240         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00241}00241 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00242}00242         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00243}00243     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00244}00244 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00248}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{00248}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{RegisterPerson}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00249}00249         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call RegisterPerson"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00250}00250 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00251}00251         String textName     = editTextPersonName.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00252}00252         String textSurname  = editTextPersonSurname.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00253}00253         String textEmail    = editTextPersonEmail.getText().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00254}00254         \textcolor{keywordtype}{int}    intAge       = Integer.parseInt(editTextPersonAge.getText().toString());}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00255}00255         String textGender   = spinnerGender.getSelectedItem().toString();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00256}00256         \textcolor{keywordtype}{byte}   byteGender   = ConvertGenderStrToByte(textGender);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00257}00257 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00258}00258         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person Info:  Name: "{}}    + textName    + \textcolor{stringliteral}{"{}, "{}} +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00259}00259                                                    \textcolor{stringliteral}{"{}Surname: "{}} + textSurname + \textcolor{stringliteral}{"{}, "{}} +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00260}00260                                                    \textcolor{stringliteral}{"{}Email: "{}}   + textEmail   + \textcolor{stringliteral}{"{}, "{}} +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00261}00261                                                    \textcolor{stringliteral}{"{}Age: "{}}     + intAge      + \textcolor{stringliteral}{"{}, "{}} +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00262}00262                                                    \textcolor{stringliteral}{"{}Gender: "{}}  + textGender  + \textcolor{stringliteral}{"{} ("{}} + byteGender + \textcolor{stringliteral}{"{})"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00263}00263 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00264}00264         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}}   person   = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}}(textName, textSurname, textEmail, intAge, byteGender);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00265}00265         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00266}00266 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00267}00267         \textcolor{keywordtype}{long} res\_insert = dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25532e38a4495f54973666bb3f72a2}{insertPerson}}(person);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00268}00268         \textcolor{keywordflow}{if} (res\_insert == -\/1) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00269}00269             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Error while insert person in table"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00270}00270             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Error while insert person in table"{}}, Toast.LENGTH\_LONG).show();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00271}00271         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (res\_insert == -\/2) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00272}00272             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person exist in table"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00273}00273             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Пользователь уже существует"{}}, Toast.LENGTH\_LONG).show();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00274}00274         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00275}00275             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Insert successful"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00276}00276             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Insert successful"{}}, Toast.LENGTH\_LONG).show();}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00277}00277         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00278}00278     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00279}00279 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00285}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a88477047b89cfe9b4368e0405ec67b97}{00285}}     \textcolor{keyword}{private} \textcolor{keywordtype}{byte} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a88477047b89cfe9b4368e0405ec67b97}{ConvertGenderStrToByte}}(String textGender) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00286}00286         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call ConvertGenderStrToByte"{}});}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00287}00287         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person select "{}} + textGender);}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00288}00288 }
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00289}00289         \textcolor{keywordflow}{switch} (textGender) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00290}00290             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Мужской"{}}:}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00291}00291                 \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00292}00292             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Женский"{}}:}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00293}00293                 \textcolor{keywordflow}{return} 2;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00294}00294             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Неопределённый"{}}:}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00295}00295                 \textcolor{keywordflow}{return} 3;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00296}00296             \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00297}00297                 \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00298}00298         \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00299}00299     \}}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00300}00300 \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00162}00162         \textcolor{keywordtype}{boolean} IsError = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00164}00164         \textcolor{keywordflow}{if} (!IsCorrectPersonName()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00165}00165             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect name"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00166}00166             editTextPersonName.setError(\textcolor{stringliteral}{"{}Неправильное имя"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00167}00167             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00168}00168         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00169}00169         \textcolor{keywordflow}{if} (!IsCorrectSurname()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00170}00170             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect surname"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00171}00171             editTextPersonSurname.setError(\textcolor{stringliteral}{"{}Неправильная фамилия"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00172}00172             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00173}00173         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00174}00174         \textcolor{keywordflow}{if} (!IsCorrectEmailPerson()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00175}00175             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect email"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00176}00176             editTextPersonEmail.setError(\textcolor{stringliteral}{"{}Неправильный email"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00177}00177             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00178}00178         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00179}00179         \textcolor{keywordflow}{if} (!IsCorrectAgePerson()) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00180}00180             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Incorrect age"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00181}00181             editTextPersonAge.setError(\textcolor{stringliteral}{"{}Некорректный возраст"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00182}00182             IsError = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00183}00183         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00185}00185         \textcolor{keywordflow}{return} !IsError;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00186}00186     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00193}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aecf2e421e0ff4303a84ecdf05d1edf18}{00193}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aecf2e421e0ff4303a84ecdf05d1edf18}{IsCorrectPersonName}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00194}00194         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectPersonName"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00196}00196         String textName = editTextPersonName.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00197}00197         \textcolor{keywordflow}{return} textName.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00198}00198     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00205}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a5b3fce9f4bd57fcf4da9efd2e2a83eaa}{00205}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a5b3fce9f4bd57fcf4da9efd2e2a83eaa}{IsCorrectSurname}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00206}00206         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectSurname"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00208}00208         String textSurname = editTextPersonSurname.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00209}00209         \textcolor{keywordflow}{return} textSurname.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00210}00210     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00217}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a46e643244455c260d3228fd819f8b01f}{00217}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a46e643244455c260d3228fd819f8b01f}{IsCorrectEmailPerson}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00218}00218         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectEmailPerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00220}00220         String textEmail = editTextPersonEmail.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00221}00221         \textcolor{keywordflow}{return} textEmail.length() != 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00222}00222     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00229}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acfa57dc2961c60898451d562fc416476}{00229}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_acfa57dc2961c60898451d562fc416476}{IsCorrectAgePerson}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00230}00230         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call IsCorrectAgePerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00232}00232         String textAge = editTextPersonAge.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00233}00233         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00234}00234             \textcolor{keywordtype}{int} age = Integer.parseInt(textAge);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00235}00235             \textcolor{keywordflow}{if} (age <= 0 || age > 200) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00236}00236                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00237}00237             \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00238}00238         \} \textcolor{keywordflow}{catch}  (NumberFormatException ex) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00239}00239             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}catch exception age converting string to int"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00241}00241             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00242}00242         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00244}00244         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00245}00245     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00250}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{00250}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_aa68a6b1ff861ba89b341886d2d841130}{RegisterPerson}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00251}00251         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call RegisterPerson"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00253}00253         String textName     = editTextPersonName.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00254}00254         String textSurname  = editTextPersonSurname.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00255}00255         String textEmail    = editTextPersonEmail.getText().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00256}00256         \textcolor{keywordtype}{int}    intAge       = Integer.parseInt(editTextPersonAge.getText().toString());}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00257}00257         String textGender   = spinnerGender.getSelectedItem().toString();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00258}00258         \textcolor{keywordtype}{byte}   byteGender   = ConvertGenderStrToByte(textGender);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00260}00260         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person Info:  Name: "{}}    + textName    + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00261}00261                                                    \textcolor{stringliteral}{"{}Surname: "{}} + textSurname + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00262}00262                                                    \textcolor{stringliteral}{"{}Email: "{}}   + textEmail   + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00263}00263                                                    \textcolor{stringliteral}{"{}Age: "{}}     + intAge      + \textcolor{stringliteral}{"{}, "{}} +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00264}00264                                                    \textcolor{stringliteral}{"{}Gender: "{}}  + textGender  + \textcolor{stringliteral}{"{} ("{}} + byteGender + \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00266}00266         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}}   person   = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}}(textName, textSurname, textEmail, intAge, byteGender);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00267}00267         \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}} dbHelper = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper}{DBHelper}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00269}00269         \textcolor{keywordtype}{long} res\_insert = dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25532e38a4495f54973666bb3f72a2}{insertPerson}}(person);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00270}00270         \textcolor{keywordflow}{if} (res\_insert == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00271}00271             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_aeed9e9ef1934883b8f8aa3061e8d95eb}{LogErr}}(TAG, \textcolor{stringliteral}{"{}Error while insert person in table"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00272}00272             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Error while insert person in table"{}}, Toast.LENGTH\_LONG).show();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00273}00273         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (res\_insert == -\/2) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00274}00274             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person exist in table"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00275}00275             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Пользователь уже существует"{}}, Toast.LENGTH\_LONG).show();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00276}00276         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00277}00277             logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Insert successful"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00278}00278             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Insert successful"{}}, Toast.LENGTH\_LONG).show();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00279}00279         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00280}00280     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00287}\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a88477047b89cfe9b4368e0405ec67b97}{00287}}     \textcolor{keyword}{private} \textcolor{keywordtype}{byte} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_main_activity_a88477047b89cfe9b4368e0405ec67b97}{ConvertGenderStrToByte}}(String textGender) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00288}00288         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}call ConvertGenderStrToByte"{}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00289}00289         logger.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1logger_1_1_logger_a5cf3890060633cb2b26fc94b42bdefea}{LogInfo}}(TAG, \textcolor{stringliteral}{"{}Person select "{}} + textGender);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00291}00291         \textcolor{keywordflow}{switch} (textGender) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00292}00292             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Мужской"{}}:}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00293}00293                 \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00294}00294             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Женский"{}}:}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00295}00295                 \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00296}00296             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Неопределённый"{}}:}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00297}00297                 \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00298}00298             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00299}00299                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00300}00300         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00301}00301     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00302}00302 \}}
 
 \end{DoxyCode}

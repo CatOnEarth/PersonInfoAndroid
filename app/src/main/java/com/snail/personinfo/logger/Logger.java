@@ -70,6 +70,4 @@ public class Logger {
             Log.v(tag, message);
         }
     }
-
-
 }
