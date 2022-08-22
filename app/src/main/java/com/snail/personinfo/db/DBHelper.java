@@ -80,7 +80,9 @@ public class DBHelper  extends SQLiteOpenHelper {
      *
      * @param person Object person, who need to add
      *
-     * @return error: -1; -2: person exist in table; another: ok
+     * @return -1: error
+     * @return -2: person exist in table
+     * @return  another: id row in table
      */
     public long insertPerson(Person person) {
         logger = new Logger();
@@ -125,7 +127,8 @@ public class DBHelper  extends SQLiteOpenHelper {
     /** Check if person exist in person table
      *
      * @param person Object person, who need to find
-     * @return true - exist; false - not exist
+     * @return true: exist
+     * @return false: not exist
      */
     public boolean IsPersonExist(Person person) {
         SQLiteDatabase database = getWritableDatabase();

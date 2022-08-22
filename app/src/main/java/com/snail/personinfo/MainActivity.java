@@ -109,7 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
     /** Function for check input in all fields
      *
-     * @return true - correct input; false - incorrect input
+     * @return true: correct input
+     * @return false: incorrect input
      */
     private boolean IsCorrectFillFields() {
         logger.LogInfo(TAG, "call IsCorrectFillFields");
@@ -142,7 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function for check correction person name field
-     * @return true - correct input; false - incorrect input
+     * @return true: correct input
+     * @return false: incorrect input
      */
     private boolean IsCorrectPersonName() {
         logger.LogInfo(TAG, "call IsCorrectPersonName");
@@ -153,7 +155,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function for check correction person surname field
-     * @return true - correct input; false - incorrect input
+     * @return true: correct input
+     * @return false: incorrect input
      */
     private boolean IsCorrectSurname() {
         logger.LogInfo(TAG, "call IsCorrectSurname");
@@ -164,7 +167,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function for check correction person email field
-     * @return true - correct input; false - incorrect input
+     * @return true: correct input
+     * @return false: incorrect input
      */
     private boolean IsCorrectEmailPerson() {
         logger.LogInfo(TAG, "call IsCorrectEmailPerson");
@@ -175,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function for check correction person age field
-     * @return true - correct input; false - incorrect input
+     * @return true: correct input
+     * @return false: incorrect input
      */
     private boolean IsCorrectAgePerson() {
         logger.LogInfo(TAG, "call IsCorrectAgePerson");
