@@ -88,8 +88,8 @@
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00101}00101         ArrayList<Person> persons = dbHelper.\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aa0a8ecdc27d90bcd2096b226ba4ae494}{selectAllPersons}}();}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00102}00102 }
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00103}00103         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii = 0; ii < persons.size(); ++ii) \{}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Person №"{}} + String.valueOf(ii) + \textcolor{stringliteral}{"{}. Name: "{}} + persons.get(ii).getName() +}
-\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105                     \textcolor{stringliteral}{"{}; Surname: "{}} + persons.get(ii).getSurname() + \textcolor{stringliteral}{"{}; Email: "{}} + persons.get(ii).getEmail() + \textcolor{stringliteral}{"{}; Age: "{}} + String.valueOf(persons.get(ii).getAge()) +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104             Toast.makeText(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Person №"{}} + ii + \textcolor{stringliteral}{"{}. Name: "{}} + persons.get(ii).getName() +}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105                     \textcolor{stringliteral}{"{}; Surname: "{}} + persons.get(ii).getSurname() + \textcolor{stringliteral}{"{}; Email: "{}} + persons.get(ii).getEmail() + \textcolor{stringliteral}{"{}; Age: "{}} + persons.get(ii).getAge() +}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00106}00106                     \textcolor{stringliteral}{"{}; Gender: "{}} + String.valueOf(persons.get(ii).getGender()), Toast.LENGTH\_LONG).show();}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00107}00107         \}}
 \DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00108}00108     \}}

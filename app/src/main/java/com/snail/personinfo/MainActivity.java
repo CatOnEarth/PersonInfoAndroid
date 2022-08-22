@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Person> persons = dbHelper.selectAllPersons();
 
         for (int ii = 0; ii < persons.size(); ++ii) {
-            Toast.makeText(this, "Person №" + String.valueOf(ii) + ". Name: " + persons.get(ii).getName() +
-                    "; Surname: " + persons.get(ii).getSurname() + "; Email: " + persons.get(ii).getEmail() + "; Age: " + String.valueOf(persons.get(ii).getAge()) +
+            Toast.makeText(this, "Person №" + ii + ". Name: " + persons.get(ii).getName() +
+                    "; Surname: " + persons.get(ii).getSurname() + "; Email: " + persons.get(ii).getEmail() + "; Age: " + persons.get(ii).getAge() +
                     "; Gender: " + String.valueOf(persons.get(ii).getGender()), Toast.LENGTH_LONG).show();
         }
     }

@@ -129,8 +129,6 @@ public class DBHelper  extends SQLiteOpenHelper {
 
     /** Select person from person table
      *
-     * @param person Object person, who need to select
-     *
      * @return Selected person from person table
      */
     public ArrayList<Person> selectAllPersons() {
@@ -141,21 +139,20 @@ public class DBHelper  extends SQLiteOpenHelper {
         @SuppressLint("Recycle") Cursor cursor = database.query(TABLE_PERSONS, null,
                 null, null, null, null, null);
 
-        ArrayList<Person> persons = new ArrayList<Person>();
+        ArrayList<Person> persons = new ArrayList<>();
 
         if (cursor.moveToFirst()) {
-            int idColIndex      = cursor.getColumnIndex(KEY_ID);
             int nameColIndex    = cursor.getColumnIndex(KEY_NAME);
             int surnameColIndex = cursor.getColumnIndex(KEY_SURNAME);
             int emailColIndex   = cursor.getColumnIndex(KEY_EMAIL);
             int ageColIndex     = cursor.getColumnIndex(KEY_AGE);
             int genderColIndex  = cursor.getColumnIndex(KEY_GENDER);
 
-            String textName    = "";
-            String textSurname = "";
-            String textEmail   = "";
-            int    intAge      = -1;
-            byte   byteGender  = -1;
+            String textName;
+            String textSurname;
+            String textEmail;
+            int    intAge;
+            byte   byteGender;
 
             int count = 1;
 
@@ -166,8 +163,8 @@ public class DBHelper  extends SQLiteOpenHelper {
                 intAge       = cursor.getInt(ageColIndex);
                 byteGender   = (byte) cursor.getInt(genderColIndex);
 
-                logger.LogInfo(TAG, "Person №" + String.valueOf(count) + ". Name: " + textName +
-                        "; Surname: " + textSurname + "; Email: " + textEmail + "; Age: " + String.valueOf(intAge) +
+                logger.LogInfo(TAG, "Person №" + count + ". Name: " + textName +
+                        "; Surname: " + textSurname + "; Email: " + textEmail + "; Age: " + intAge +
                         "; Gender: " + String.valueOf(byteGender));
 
                 persons.add(new Person(textName, textSurname, textEmail, intAge, byteGender));
