@@ -1,3 +1,3 @@
 # PersonInfoAndroid
-<h1>Person Info</h1>
+<h2>Person Info</h2>
 Documentation: https://catonearth.github.io/PersonInfoAndroid/html/
