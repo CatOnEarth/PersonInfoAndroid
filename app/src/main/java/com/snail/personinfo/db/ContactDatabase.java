@@ -2,6 +2,9 @@ package com.snail.personinfo.db;
 
 import android.provider.BaseColumns;
 
+/**
+ * 
+ */
 public class ContactDatabase {
     public static final String DB_NAME    = "persons.db";
     public static final int    DB_VERSION = 1;
