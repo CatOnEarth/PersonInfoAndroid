@@ -27,6 +27,8 @@ void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a4a70
 \item 
 void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a9a9746ed1224d05dce7e2e243de0f92d}{on\+Upgrade}} (SQLite\+Database db, int old\+Version, int new\+Version)
 \item 
+void \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e}{delete\+DB}} ()
+\item 
 long \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25532e38a4495f54973666bb3f72a2}{insert\+Person}} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}} person)
 \item 
 \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}} \mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a494bc0a63b7a4da9371b2b64234fe49b}{select\+Person}} (\mbox{\hyperlink{classcom_1_1snail_1_1personinfo_1_1_person}{Person}} person)
@@ -91,6 +93,32 @@ Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00044}{44}} of fil
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e}} 
+\index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!deleteDB@{deleteDB}}
+\index{deleteDB@{deleteDB}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
+\doxysubsubsection{\texorpdfstring{deleteDB()}{deleteDB()}}
+{\footnotesize\ttfamily void com.\+snail.\+personinfo.\+db.\+DBHelper.\+delete\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear DB 
+
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00082}{82}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_a25607f23473b83329c3a327fb65ab08e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25532e38a4495f54973666bb3f72a2}\label{classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper_aea25532e38a4495f54973666bb3f72a2}} 
 \index{com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}!insertPerson@{insertPerson}}
 \index{insertPerson@{insertPerson}!com.snail.personinfo.db.DBHelper@{com.snail.personinfo.db.DBHelper}}
@@ -113,7 +141,7 @@ another\+: id row in table
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00087}{87}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00098}{98}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -149,7 +177,7 @@ false\+: not exist
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00133}{133}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00144}{144}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -182,7 +210,8 @@ Call if database not exist
 
 Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00053}{53}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,7 +264,7 @@ Selected person from person table
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00123}{123}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
+Definition at line \mbox{\hyperlink{_d_b_helper_8java_source_l00134}{134}} of file \mbox{\hyperlink{_d_b_helper_8java_source}{DBHelper.\+java}}.
 
 
 

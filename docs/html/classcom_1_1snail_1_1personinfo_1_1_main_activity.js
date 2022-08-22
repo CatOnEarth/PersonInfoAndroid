@@ -1,5 +1,6 @@
 var classcom_1_1snail_1_1personinfo_1_1_main_activity =
 [
+    [ "clearDB", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#afe482d0fed14a69943e35ac4ec34ba1b", null ],
     [ "ConvertGenderStrToByte", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a88477047b89cfe9b4368e0405ec67b97", null ],
     [ "IsCorrectAgePerson", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#acfa57dc2961c60898451d562fc416476", null ],
     [ "IsCorrectEmailPerson", "classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a46e643244455c260d3228fd819f8b01f", null ],

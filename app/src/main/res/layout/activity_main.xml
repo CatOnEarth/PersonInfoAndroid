@@ -160,5 +160,11 @@
         android:layout_height="wrap_content"
         android:text="@string/ButtonRegisterPerson" />
 
+    <Button
+        android:id="@+id/buttonClearDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonClearDB" />
+
 </LinearLayout>
 

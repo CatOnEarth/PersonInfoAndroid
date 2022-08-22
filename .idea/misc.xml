@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/development/android/SavePersonInfo/app/src/main/res/layout/activity_main.xml" value="0.2988679352838745" />
+        <entry key="..\:/development/android/SavePersonInfo/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/docs" />
+    <option name="OTHER_OPTIONS" value="-encoding utf-8 -charset utf-8" />
     <option name="OPTION_INCLUDE_LIBS" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">

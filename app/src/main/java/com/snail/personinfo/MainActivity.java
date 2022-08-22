@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button bReg           = findViewById(R.id.buttonRegisterPerson);
         Button bSelectAvatar  = findViewById(R.id.buttonSelectAvatar);
+        Button bClearDB       = findViewById(R.id.buttonClearDB);
 
         View.OnClickListener regBtnClick = view -> {
             logger.LogInfo(TAG, "Click reg button");
@@ -72,8 +73,25 @@ public class MainActivity extends AppCompatActivity {
             openFileDialog(view);
         };
 
+        View.OnClickListener clearDbBtnClick = view -> {
+            logger.LogInfo(TAG, "Click clear db button");
+            clearDB();
+        };
+
         bReg.setOnClickListener(regBtnClick);
         bSelectAvatar.setOnClickListener(selectAvatarBtnClick);
+        bClearDB.setOnClickListener(clearDbBtnClick);
+    }
+
+    /** Method to clear db person info table
+     *
+     */
+    private void clearDB() {
+        logger.LogInfo(TAG, "call clearDB");
+        DBHelper dbHelper = new DBHelper(this);
+        dbHelper.deleteDB();
+
+        Toast.makeText(this, "База данных очищена", Toast.LENGTH_LONG).show();
     }
 
     /** Browser for select avatar */
@@ -249,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                 return 1;
             case "Женский":
                 return 2;
-            case "Неопределенный":
+            case "Неопределённый":
                 return 3;
             default:
                 return 0;

@@ -12,6 +12,7 @@
     <string name="ButtonRegisterPerson">Зарегистрировать</string>
     <string name="DescriptionImageViewAvatar">avatar</string>
     <string name="ButtonTextSelectImageView">Выбрать</string>
+    <string name="ButtonClearDB">Очистить базу данных</string>
     <string-array name="genderTypes">
         <item>Не указан</item>
         <item>Мужской</item>

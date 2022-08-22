@@ -1,6 +1,7 @@
 var classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper =
 [
     [ "DBHelper", "classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a1ddbfe0a42cac96afd304c7208ea879f", null ],
+    [ "deleteDB", "classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a25607f23473b83329c3a327fb65ab08e", null ],
     [ "insertPerson", "classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#aea25532e38a4495f54973666bb3f72a2", null ],
     [ "IsPersonExist", "classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#aa43cde57e324cc68d2236eb22470d7d8", null ],
     [ "onCreate", "classcom_1_1snail_1_1personinfo_1_1db_1_1_d_b_helper.html#a4a708a0b725e3a71c00075a2a8927a1d", null ],

@@ -76,6 +76,17 @@ public class DBHelper  extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /** Clear DB
+     *
+     */
+    public void deleteDB() {
+        SQLiteDatabase database = getWritableDatabase();
+        database.execSQL("DROP TABLE IF EXISTS " + TABLE_PERSONS);
+        onCreate(database);
+
+        //database.close();
+    }
+
     /** Insert new person in person table
      *
      * @param person Object person, who need to add
