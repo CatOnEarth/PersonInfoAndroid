@@ -1,3 +1,4 @@
 # PersonInfoAndroid
-<h2>Person Info</h2>
-Documentation: https://catonearth.github.io/PersonInfoAndroid/html/
+<h2>Person Info  App</h2>
+<p>This is test application of my developing on Android</p>
+<p>Documentation(Doxywizard): https://catonearth.github.io/PersonInfoAndroid/html/<p>
