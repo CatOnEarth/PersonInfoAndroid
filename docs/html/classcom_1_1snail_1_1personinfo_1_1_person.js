@@ -16,5 +16,6 @@ var classcom_1_1snail_1_1personinfo_1_1_person =
     [ "email", "classcom_1_1snail_1_1personinfo_1_1_person.html#a6e205fb07f2812da8e7c8b1928f94613", null ],
     [ "gender", "classcom_1_1snail_1_1personinfo_1_1_person.html#a604f94038191a591c338db0233cac197", null ],
     [ "name", "classcom_1_1snail_1_1personinfo_1_1_person.html#a3751333ecb4d79261878f38bf114418c", null ],
-    [ "surname", "classcom_1_1snail_1_1personinfo_1_1_person.html#a4c690276f3b5c9900cd6fa7537378063", null ]
+    [ "surname", "classcom_1_1snail_1_1personinfo_1_1_person.html#a4c690276f3b5c9900cd6fa7537378063", null ],
+    [ "TAG", "classcom_1_1snail_1_1personinfo_1_1_person.html#add584ed9103589666b6ba574e25e41f4", null ]
 ];

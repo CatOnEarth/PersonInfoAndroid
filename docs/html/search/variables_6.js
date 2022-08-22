@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../classcom_1_1snail_1_1personinfo_1_1_person.html#a3751333ecb4d79261878f38bf114418c',1,'com::snail::personinfo::Person']]]
+  ['logger_0',['logger',['../classcom_1_1snail_1_1personinfo_1_1_main_activity.html#a4cf97e15fdd4c41a64acc5a8ce986aaa',1,'com::snail::personinfo::MainActivity']]]
 ];

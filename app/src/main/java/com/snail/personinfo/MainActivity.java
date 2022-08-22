@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * < Logger
      */
-    Logger logger;
+    private Logger logger;
 
     /**
      * < EditText for person name
